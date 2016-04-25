@@ -1,11 +1,10 @@
-a3-jheer-mcorrell-jhoffs
+a3-rickixie-taoaoao
 ===============
 
 ## Team Members
 
-1. Jeffrey Heer (jheer)
-2. Michael Correll (mcorrell)
-3. Jane Hoffswell (jhoffs)
+1. Ricki Si Xie (rickixie)
+2. Yitao Wang (yitaow)
 
 ## Project Name
 
