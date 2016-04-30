@@ -1,0 +1,101 @@
+country_id,country_value,decimal,date,indicator_id,indicator_value,value
+XD,High income,0,2014,SE.SCH.LIFE.FE,"Expected years of schooling, female",
+XD,High income,0,2013,SE.SCH.LIFE.FE,"Expected years of schooling, female",16.73432
+XD,High income,0,2012,SE.SCH.LIFE.FE,"Expected years of schooling, female",16.49264
+XD,High income,0,2011,SE.SCH.LIFE.FE,"Expected years of schooling, female",16.4626
+XD,High income,0,2010,SE.SCH.LIFE.FE,"Expected years of schooling, female",16.32626
+XD,High income,0,2009,SE.SCH.LIFE.FE,"Expected years of schooling, female",16.13652
+XD,High income,0,2008,SE.SCH.LIFE.FE,"Expected years of schooling, female",15.9863
+XD,High income,0,2007,SE.SCH.LIFE.FE,"Expected years of schooling, female",15.88624
+XD,High income,0,2006,SE.SCH.LIFE.FE,"Expected years of schooling, female",15.78519
+XD,High income,0,2005,SE.SCH.LIFE.FE,"Expected years of schooling, female",15.77745
+XM,Low income,0,2014,SE.SCH.LIFE.FE,"Expected years of schooling, female",
+XM,Low income,0,2013,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.17584
+XM,Low income,0,2012,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.16682
+XM,Low income,0,2011,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.07464
+XM,Low income,0,2010,SE.SCH.LIFE.FE,"Expected years of schooling, female",8.82291
+XM,Low income,0,2009,SE.SCH.LIFE.FE,"Expected years of schooling, female",8.59805
+XM,Low income,0,2008,SE.SCH.LIFE.FE,"Expected years of schooling, female",8.36454
+XM,Low income,0,2007,SE.SCH.LIFE.FE,"Expected years of schooling, female",8.04096
+XM,Low income,0,2006,SE.SCH.LIFE.FE,"Expected years of schooling, female",7.79415
+XM,Low income,0,2005,SE.SCH.LIFE.FE,"Expected years of schooling, female",7.48171
+XN,Lower middle income,0,2014,SE.SCH.LIFE.FE,"Expected years of schooling, female",
+XN,Lower middle income,0,2013,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.91736
+XN,Lower middle income,0,2012,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.93264
+XN,Lower middle income,0,2011,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.63715
+XN,Lower middle income,0,2010,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.35783
+XN,Lower middle income,0,2009,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.06429
+XN,Lower middle income,0,2008,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.94298
+XN,Lower middle income,0,2007,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.68186
+XN,Lower middle income,0,2006,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.41794
+XN,Lower middle income,0,2005,SE.SCH.LIFE.FE,"Expected years of schooling, female",9.22232
+XP,Middle income,0,2014,SE.SCH.LIFE.FE,"Expected years of schooling, female",
+XP,Middle income,0,2013,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.04939
+XP,Middle income,0,2012,SE.SCH.LIFE.FE,"Expected years of schooling, female",11.89204
+XP,Middle income,0,2011,SE.SCH.LIFE.FE,"Expected years of schooling, female",11.61485
+XP,Middle income,0,2010,SE.SCH.LIFE.FE,"Expected years of schooling, female",11.37829
+XP,Middle income,0,2009,SE.SCH.LIFE.FE,"Expected years of schooling, female",11.14185
+XP,Middle income,0,2008,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.98265
+XP,Middle income,0,2007,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.72285
+XP,Middle income,0,2006,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.43831
+XP,Middle income,0,2005,SE.SCH.LIFE.FE,"Expected years of schooling, female",10.21974
+XT,Upper middle income,0,2014,SE.SCH.LIFE.FE,"Expected years of schooling, female",
+XT,Upper middle income,0,2013,SE.SCH.LIFE.FE,"Expected years of schooling, female",13.81932
+XT,Upper middle income,0,2012,SE.SCH.LIFE.FE,"Expected years of schooling, female",13.40038
+XT,Upper middle income,0,2011,SE.SCH.LIFE.FE,"Expected years of schooling, female",13.15627
+XT,Upper middle income,0,2010,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.98503
+XT,Upper middle income,0,2009,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.84003
+XT,Upper middle income,0,2008,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.62021
+XT,Upper middle income,0,2007,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.35404
+XT,Upper middle income,0,2006,SE.SCH.LIFE.FE,"Expected years of schooling, female",12.01755
+XT,Upper middle income,0,2005,SE.SCH.LIFE.FE,"Expected years of schooling, female",11.7297
+XD,High income,0,2014,SE.SCH.LIFE.MA,"Expected years of schooling, male",
+XD,High income,0,2013,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.93048
+XD,High income,0,2012,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.70622
+XD,High income,0,2011,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.64411
+XD,High income,0,2010,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.54357
+XD,High income,0,2009,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.37947
+XD,High income,0,2008,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.3007
+XD,High income,0,2007,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.21358
+XD,High income,0,2006,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.12917
+XD,High income,0,2005,SE.SCH.LIFE.MA,"Expected years of schooling, male",15.14658
+XM,Low income,0,2014,SE.SCH.LIFE.MA,"Expected years of schooling, male",
+XM,Low income,0,2013,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.08388
+XM,Low income,0,2012,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.10538
+XM,Low income,0,2011,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.06639
+XM,Low income,0,2010,SE.SCH.LIFE.MA,"Expected years of schooling, male",9.86846
+XM,Low income,0,2009,SE.SCH.LIFE.MA,"Expected years of schooling, male",9.75428
+XM,Low income,0,2008,SE.SCH.LIFE.MA,"Expected years of schooling, male",9.51305
+XM,Low income,0,2007,SE.SCH.LIFE.MA,"Expected years of schooling, male",9.22882
+XM,Low income,0,2006,SE.SCH.LIFE.MA,"Expected years of schooling, male",8.99967
+XM,Low income,0,2005,SE.SCH.LIFE.MA,"Expected years of schooling, male",8.7149
+XN,Lower middle income,0,2014,SE.SCH.LIFE.MA,"Expected years of schooling, male",
+XN,Lower middle income,0,2013,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.37298
+XN,Lower middle income,0,2012,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.38833
+XN,Lower middle income,0,2011,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.19704
+XN,Lower middle income,0,2010,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.9535
+XN,Lower middle income,0,2009,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.67729
+XN,Lower middle income,0,2008,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.70103
+XN,Lower middle income,0,2007,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.57548
+XN,Lower middle income,0,2006,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.36713
+XN,Lower middle income,0,2005,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.24164
+XP,Middle income,0,2014,SE.SCH.LIFE.MA,"Expected years of schooling, male",
+XP,Middle income,0,2013,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.22564
+XP,Middle income,0,2012,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.10197
+XP,Middle income,0,2011,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.90468
+XP,Middle income,0,2010,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.6819
+XP,Middle income,0,2009,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.43093
+XP,Middle income,0,2008,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.37362
+XP,Middle income,0,2007,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.21016
+XP,Middle income,0,2006,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.98142
+XP,Middle income,0,2005,SE.SCH.LIFE.MA,"Expected years of schooling, male",10.81899
+XT,Upper middle income,0,2014,SE.SCH.LIFE.MA,"Expected years of schooling, male",
+XT,Upper middle income,0,2013,SE.SCH.LIFE.MA,"Expected years of schooling, male",13.53081
+XT,Upper middle income,0,2012,SE.SCH.LIFE.MA,"Expected years of schooling, male",13.20254
+XT,Upper middle income,0,2011,SE.SCH.LIFE.MA,"Expected years of schooling, male",13.00094
+XT,Upper middle income,0,2010,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.80992
+XT,Upper middle income,0,2009,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.59982
+XT,Upper middle income,0,2008,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.4167
+XT,Upper middle income,0,2007,SE.SCH.LIFE.MA,"Expected years of schooling, male",12.18957
+XT,Upper middle income,0,2006,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.91801
+XT,Upper middle income,0,2005,SE.SCH.LIFE.MA,"Expected years of schooling, male",11.68052

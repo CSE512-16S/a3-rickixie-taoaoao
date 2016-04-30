@@ -2,6 +2,7 @@ import requests
 import pandas
 import json
 import pandas as pd
+import csv
 #https://searchcode.com/codesearch/view/86732471/
 #define countries/income level
 #Countries code ---
@@ -14,7 +15,7 @@ import pandas as pd
 country_string = "LIC;MIC;LMC;UMC;HIC"
 
 #define indicators
-indicator_string = "SE.SCH.LIFE.FE"
+indicator_string = "SE.SCH.LIFE.FE;SE.SCH.LIFE.MA"
 
 #define source: Gender Statistics is 14
 source = "14"
@@ -33,10 +34,23 @@ data = json.loads(response.text)[1]
 data1=json.dumps(data)
 # data
 
-file_name = "wb_%(indicatorstring)s.json"%{"indicatorstring":indicator_string}
-wb_file = open(file_name,"w")
+file_name = "wb_%(indicatorstring)s"%{"indicatorstring":indicator_string}
+file_name_json = "{}.json".format(file_name)
+wb_file = open(file_name_json,"w")
 wb_file.write(data1)
 wb_file.close()
+file_name_csv = "{}.csv".format(file_name)
+f = csv.writer(open(file_name_csv, "w"))
+#csv header
+f.writerow(["country_id","country_value","year","indicator_id","indicator_name","value"])
+
+for data in data:
+	f.writerow([data["country"]["id"],
+		data["country"]["value"],
+		data["date"],
+		data["indicator"]["id"],
+		data["indicator"]["value"],
+		data["value"]])
 
 # [
 #   {"key":"clothing, beauty, & fashion",
