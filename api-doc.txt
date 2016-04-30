@@ -1,0 +1,91 @@
+	
+
+11/5/13
+
+
+In API, we don't have provision to query all indicators, however you can query API for multiple countries, multiple indicators for all years.
+
+If API calls made with multiple indicators, 'source' is mandatory query parameter.
+Source Id for WDI is 2, for complete list of sources try http://api.worldbank.org/sources 
+Also, maximum of 60 indicators allowed in one API call.
+
+Following API call will return data for country 'ind', indicators 'sp.pop.totl', 'sp.pop.grow' and 'se.prm.ages' for all years.
+http://api.worldbank.org/country/ind/indicator/sp.pop.totl;sp.pop.grow;se.prm.ages?source=2&per_page=1000 
+
+Call with multiple countries, multiple indicators for all years.
+http://api.worldbank.org/country/ind;pak;aus/indicator/sp.pop.totl;sp.pop.grow;se.prm.ages?source=2&per_page=1000 
+
+You can get data for all the countries, regions, income groups and aggregates for a given indicator for all the years.
+http://api.worldbank.org/country/all/indicator/sp.pop.totl?per_page=14000&format=json 
+
+You can download All countries, all indicators for all years in excel or CSV format from following link.
+http://data.worldbank.org/data-catalog/world-development-indicators 
+Click on WDI (Excel)-ZIP or WDI (CSV)-ZIP.
+
+Best,
+
+Development Data Group
+The World Bank
+data.worldbank.org
+
+Countries code ---
+1. Low Income: LIC
+2. Middle Income: MIS
+3. Lower Middle Income = LMC
+4. Upper Middle Income = UMC
+5. Low & Middle Income = LMY
+6. High Income = HIC
+
+
+Get a indicator of LMC income of the past 56 years
+http://api.worldbank.org/countries/lac/indicators/NY.GDP.MKTP.CD?per_page=56&format=json
+
+Get a group of LMC income 
+http://api.worldbank.org/country/lmc/indicator/sp.pop.totl;sp.pop.grow;se.prm.ages?source=2&per_page=1000&format=json
+
+Get a indicator from multiple income within certain year
+http://api.worldbank.org/countries/lic;lmc/indicators/NY.GDP.MKTP.CD?date=2000:2002
+http://api.worldbank.org/countries/lic;lmc/indicators/NY.GDP.MKTP.CD?date=2000:2002&format=json
+
+Get a indicator's definition
+http://api.worldbank.org/indicators/NY.GDP.MKTP.CD
+
+Clean up data --> http://bl.ocks.org/shancarter/raw/4748131/
+d3.nest()
+ .key(function(d) { return d.indicator_id; })
+  .key(function(d) { return d.country_value; })
+.key(function(d) { return d.date; })
+  .rollup(function(values) { return d3.mean(values, function(d) {return +d.value; }) })
+  .entries(data);
+OR ro round up
+d3.nest()
+ .key(function(d) { return d.indicator_id; })
+  .key(function(d) { return d.country_value; })
+.key(function(d) { return d.date; })
+  .rollup(function(values) { return d3.mean(values, function(d) {return (d3.round(+d.value,2)); }) })
+  .entries(data);
+0R
+d3.nest()
+ .key(function(d) { return d.indicator_id; })
+  .key(function(d) { return d.country_value; })
+.key(function(d) { return d.date; })
+  .rollup(function(values) { return d3.mean(values, function(d) {return +d.value; }) })
+  .map(data);
+
+
+d3.nest()
+  .key(function(d) { return d.year; })
+  .rollup(function(values) {
+    return {
+      totalHispanics: Math.round(d3.sum(values, function(d) { return d.totalpop * d.pctHispanic })),
+      totalPop: d3.sum(values, function(d) { return d.totalpop })
+    };
+  })
+  .map(data);
+
+
+this last one:
+d3.nest()
+  .key(function(d) { return d.indicator_id; })
+.key(function(d) { return d.country_value; })
+  .entries(data);  
