@@ -1,55 +1,106 @@
-  <!-- A choropleth example by Mike Bostock.  Originally from http://bl.ocks.org/mbostock/4060606 -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
 
-  <!DOCTYPE html>
-  <meta charset="utf-8">
-  <head>
-  <title> Small Multiples </title>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-  <script scr="scritp.js" />
-  
-  </head>
+body {
+  font: 10px sans-serif;
+}
 
-  <body>
-  Acknowledgement:  This "Choropleth" example is originally from Mike Bostock's work at http://bl.ocks.org/mbostock/4060606.
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
 
-  <script>
+.x.axis path {
+  display: none;
+}
 
-  var width = 960,
-      height = 500;
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
 
-  var rateById = d3.map();
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
 
-  var quantize = d3.scale.quantize()
-      .domain([0, .15])
-      .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-  var path = d3.geo.path();
+//var formatDate = d3.time.format("%d-%b-%y");
 
-  var svg = d3.select("body").append("svg")
-      .attr("width", width)
-      .attr("height", height);
+var x = d3.scale.linear()
+    .range([0, width]);
 
-  queue()
-      .defer(d3.json, "us.json")
-      .defer(d3.tsv, "unemployment.tsv", function(d) { rateById.set(d.id, +d.rate); })
-      .await(ready);
+var y = d3.scale.linear()
+    .range([height, 0]);
 
-  function ready(error, us) {
-    svg.append("g")
-        .attr("class", "counties")
-      .selectAll("path")
-        .data(topojson.feature(us, us.objects.counties).features)
-      .enter().append("path")
-        .attr("class", function(d) { return quantize(rateById.get(d.id)); })
-        .attr("d", path);
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
 
-    svg.append("path")
-        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-        .attr("class", "states")
-        .attr("d", path);
-  }
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
 
-  </script>
+var line = d3.svg.line()
+    .x(function(d) { return x(d.year); })
+    .y(function(d) { return y(d.value); });
+
+var svg = d3.select("body").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var raw_data, nested_data; //global variable
+//get the json file
+d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
+//  if(error) return console.warn(error);
+  raw_data = csv;
+  nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
+          .key(function(d) { return d.country_id; })
+          .key(function(d) { return d.indicator_id; })
+          .map(raw_data);
+
+  x.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
+    return d.year;
+  }));
+  y.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
+    return d.value;
+  }));
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+  svg.append("path")
+      .datum(nested_data['XD']['SE.SCH.LIFE.FE'])
+      .attr("class", "line")
+      .attr("d", line);
+
+  svg.append("path")
+          .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
+          .attr("class", "line")
+          .attr("d", line)
+          .style("stroke", "green");
+});
+
+//function type(d) {
+//  d.date = formatDate.parse(d.date);
+//  d.close = +d.close;
+//  return d;
+//}
+
+</script>
