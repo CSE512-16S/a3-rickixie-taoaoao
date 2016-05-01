@@ -15,7 +15,7 @@ import csv
 country_string = "LIC;MIC;LMC;UMC;HIC"
 
 #define indicators
-indicator_string = "SE.SCH.LIFE.FE;SE.SCH.LIFE.MA"
+indicator_string = "SE.SCH.LIFE.FE"
 
 #define source: Gender Statistics is 14
 source = "14"
@@ -26,7 +26,7 @@ endYr = "2014"
 
 #define request url
 #http://api.worldbank.org/countries/lic;mic;lmc;umc;lmy;hic/indicators/SP.ADO.TFRT;SH.STA.BRTC.ZS?source=14&date=1965:2014&per_page=50&format=json
-url = "http://api.worldbank.org/countries/LIC;MIC;LMC;UMC;HIC/indicators/SE.SCH.LIFE.FE;SE.SCH.LIFE.MA?source=14&date=2005:2014&per_page=600&format=json"
+url = "http://api.worldbank.org/countries/LIC;MIC;LMC;UMC;HIC/indicators/SE.SCH.LIFE.FE?source=14&date=2005:2014&per_page=600&format=json"
 # url = "http://api.worldbank.org/countries/%(country_stringP)s/indicators/%(indicator_stringP)s?source=%(sourceP)s&date=%(startYrP)s:%(endYrP)s&per_page=50&format=json"%{"country_stringP":country_string, "indicator_stringP" = indicator_string, "sourceP" = source, "startYrP"=startYr, "endYrP"=endYr}
 
 response = requests.get(url)
