@@ -10,9 +10,9 @@ a3-rickixie-taoaoao
 
 ![Thumbnail](thumbnail.png)
 
-A visualization of the World Bank Gender Statistics data (http://datatopics.worldbank.org/gender/home).
+A visualization of the [World Bank Gender Statistics data] (http://datatopics.worldbank.org/gender/home).
 
-In this interactive visualization, we wanted to explore the relationship between gender and opportunity. The visualization includes data from the World Bank Gender Statistics, which includes time-based parameters of different indicators. The visualization was inspired by New York Time’s tax report in 2012 (link:http://www.nytimes.com/interactive/2012/11/30/us/tax-burden.html).
+In this interactive visualization, we wanted to explore the relationship between gender and opportunity. The visualization includes data from the World Bank Gender Statistics, which includes time-based parameters of different indicators. The visualization was inspired by [New York Time’s tax report in 2012] (http://www.nytimes.com/interactive/2012/11/30/us/tax-burden.html).
 
 We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity. To see the value of different gender difference indicators You can hover over the each graph to view the actual value of each year. 
 
@@ -51,6 +51,8 @@ We also prototyped our design with Tableau as shown below.
 ### Changes between Storyboard and the Final Implementation
 
 A paragraph explaining changes between the storyboard and the final implementation.
+####Design Decision
+We utilized the [ColorBrewer](http://colorbrewer2.org/) tool to choose our color encoding of the gender data.
 
 
 ## Development Process
