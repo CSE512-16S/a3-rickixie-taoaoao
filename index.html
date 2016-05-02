@@ -299,7 +299,7 @@ var datafilename,female_indicator,male_indicator;
 female_indicator ="SE.SCH.LIFE.FE";
 function getData(datafilenamen, female_indicator,male_indicator){
 
-d3.csv("/data/"+datafilenamen+".csv", function(csv){
+d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
     //if(error) return console.warn(error);
    raw_data = csv;
     nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
