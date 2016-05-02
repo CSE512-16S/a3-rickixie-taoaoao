@@ -157,9 +157,14 @@ p {
 
     <p>In this interactive visualization, we wanted to explore the relationship between gender and opportunity. The visualization includes data from the World Bank Gender Statistics, which includes time-based parameters of different indicators. The visualization was inspired by New York Time’s tax report in 2012.
 </p>
-    <p>We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity. To see the value of different gender difference indicators, hover over the each graph to view the actual value of each year.
+    <p>We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity.</p> 
+    <p>To see the value of different gender difference indicators, hover over the each graph to view the actual value of each year. Female lines are shown in pink while the male lines are shown in green.
 </p>
+<<<<<<< HEAD
   <p>Female lines are shown in pink while the male lines are shown in green.</p>
+=======
+    <p>Female lines are shown in pink while the male lines are shown in green.</p>
+>>>>>>> gh-pages
 </div>
 <!--<div class="caption">-->
     <!--<h2>Out-of-school children of primary school age, (number)</h2>-->
@@ -175,7 +180,7 @@ p {
 <div class="row1">
     <div class="caption">
         <h2>Expected year of schooling</h2>
-        <p>Except for high income country, female spent less time in education comparing to male. According to World Bank, a relatively higher schooling year have positive correlation with the overall retention rate. </p>
+        <p>Except for high income country, female spent less time in education comparing to male. According to World Bank, a relatively higher schooling year is positively correlated with the overall retention rate. </p>
     </div>
     <p id="p1">High Income</p>
     <p id="p2">Upper Middle Income</p>
@@ -248,7 +253,7 @@ function drawRow(row){
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    getData("education1", svg1, svg2, svg3, svg4, svg5);
+    getData("education1");
 
 }
 var margin = {top: 40, right: 30, bottom: 30, left: 50},
@@ -300,7 +305,7 @@ var datafilename,female_indicator,male_indicator;
 female_indicator ="SE.SCH.LIFE.FE";
 function getData(datafilenamen, female_indicator,male_indicator){
 
-d3.csv("/data/"+datafilenamen+".csv", function(csv){
+d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
     //if(error) return console.warn(error);
    raw_data = csv;
     nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
