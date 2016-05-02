@@ -33,10 +33,20 @@ If you put your work online, please also write a [one-line description and add a
 
 Put either your storyboard content or a [link to your storyboard pdf file](storyboard.pdf?raw=true) here. Just like A2, you can use any software to create a *reasonable* pdf storyboard.
 
-Since there are multiple dimensions in the gender statistics, we thought small multiples will be an ideal representation of our dataset. To allow comparison, we also wanted to have a tooltip that show the value of a indicator across all different levels while the audiences hover over a particular year. Similarity, we were also envisioned to have some form of filtering and sorting  to reorder the graphs to show the overall trends. We were also thinking using view manipulation where the audience can click on specific multiple and it will transition to another page that shows all the countries that belongs to the same income levels. 
+Since there are multiple dimensions in the gender statistics, we thought small multiples will be an ideal representation of our dataset. To allow comparison, we also wanted to have a tooltip that show the value of a indicator across all different levels while the audiences hover over a particular year.
 
-We also wanted to have some curations in the data that we represented to create meaning caption for the visualization. For example, we wanted to have a subsection in the education section that includes key indicators that represent education opportunity of women and young girls, and another section for the economic and political participation of these population. We also prototyped our design with Tableau as shown below.
+![storyboard2](storyboard/storyboard2.jpg)
 
+Similarity, we were also envisioned to have some form of filtering and sorting  to reorder the graphs to show the overall trends. We were also thinking using view manipulation where the audience can click on specific multiple and it will transition to another page that shows all the countries that belongs to the same income levels. 
+
+![storyboard1](storyboard/storyboard1.png)
+
+We also wanted to have some curations in the data that we represented to create meaning caption for the visualization. For example, we wanted to have a subsection in the education section that includes key indicators that represent education opportunity of women and young girls, and another section for the economic and political participation of these population. 
+![storyboard3](storyboard/storyboard3.jpg)
+
+We also prototyped our design with Tableau as shown below.
+
+![storyboard4](storyboard/storyboard4.png)
 
 ### Changes between Storyboard and the Final Implementation
 
