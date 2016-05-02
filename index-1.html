@@ -1,0 +1,271 @@
+ <!DOCTYPE html>
+ <meta charset="utf-8">
+
+ <head>
+ 	<title> Small Multiples </title>
+ 	<link rel="stylesheet" type="text/css" href="style.css"/>
+     <script src="/d3/d3.min.js" charset="utf-8"></script>
+     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>-->
+ 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>-->
+
+     <style>
+         html,
+         body {
+             margin: 0;
+             padding: 0;
+         }
+         #vis {
+             margin: 0 auto;
+             max-width: 1400px;
+             min-width: 1400px;
+             width: 100%;
+             /*positoin:absolute;*/
+         }
+         #vis div {
+             float: left;
+             position: relative;
+             /*background-color: antiquewhite;*/
+             margin-top: 10px;
+             margin-bottom:10px;
+             margin-left: 10px;
+             margin-right:10px;
+         }
+         #vis path {
+             fill: #2ca25f;
+             stroke: #FFF;
+             stroke-width: 1px;
+         }
+         #vis p.legend {
+             width: 100%;
+             text-align: center;
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             font-weight: bold;
+             font-size: 11px;
+         }
+         .row{
+             background-color: aliceblue;
+             position:absolute;
+             /*margin-top: 10px;*/
+             /*margin-bottom:10px;*/
+         }
+         .col {
+             background-color: grey;
+             position:absolute;
+             width: 250px;
+             height:250px;
+             margin-left: 10px;
+             margin-right:10px;
+             margin-top:10px;
+             margin-bottom:10px;
+         }
+         /*Define Property for visualization */
+         body {
+             font: 10px sans-serif;
+         }
+
+         .axis path,
+         .axis line {
+             fill: none;
+             stroke: #000;
+             shape-rendering: crispEdges;
+         }
+
+         .x.axis path {
+             display: none;
+         }
+
+         .line {
+             fill: none;
+             stroke: steelblue;
+             stroke-width: 1.5px;
+         }
+     </style>
+ </head>
+
+<body>
+<div id="vis">
+    <div class="row">
+        <!--<div class="caption">-->
+            <!--<h2>Title 1</h2>-->
+            <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+        <!--</div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+        <!--<div class="col"></div>-->
+    <!--</div>-->
+
+
+</div>
+<!--<script scr="script.js" />-->
+<script>
+
+
+//    var margin = {top: 20, right: 80, bottom: 30, left: 50},
+//            width = 900 - margin.left - margin.right,
+//            height = 500 - margin.top - margin.bottom;
+//
+//
+////    var parseDate = d3.time.format("%Y%m%d").parse;
+//
+//    var x = d3.time.scale()
+//            .range([0,width]);
+//
+//    var y = d3.scale.linear()
+//            .range([height,0]);
+//
+//    var color = d3.scale.category10();
+//
+//    var xAxis = d3.svg.axis()
+//            .scale(x)
+//            .orient("bottom");
+//
+//    var yAxis = d3.svg.axis()
+//            .scale(y)
+//            .orient("left");
+//
+//    var line = d3.svg.line()
+//            .interpolate("basis")
+//            .x(function(d) { return x(d.date); })
+//            .y(function(d) { console.log(d); return y(d.value); });
+//
+//    var svg = d3.select("body").append("svg")
+//            .attr("width", width + margin.left + margin.right)
+//            .attr("height", height + margin.top + margin.bottom)
+//            .append("g")
+//            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//
+//
+//    svg.append("g")
+//            .attr("class", "x axis")
+//            .attr("transform", "translate(0," + height + ")")
+//            .call(xAxis);
+//
+//    svg.append("g")
+//            .attr("class", "y axis")
+//            .call(yAxis);
+//
+//    var width = 250,
+//            height = 250;
+
+    var raw_data, nested_data, incomeLevel, indicator; //global variable
+    /*
+    * Get data from csv file.
+    * */
+    function formatData() {
+
+        //get the json file
+        d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function (error, csv) {
+            if (error) return console.warn(error);
+            raw_data = csv;
+            nested_data = d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
+                    .key(function (d) {
+                        return d.country_id;
+                    })
+                    .key(function (d) {
+                        return d.indicator_id;
+                    })
+                    .map(raw_data);
+//            nested_data = d3.map(nested_data);
+            /*
+            Put drawing function with the data -- otherwise it work work.
+             */
+            drawCol(nested_data);
+        })
+//        drawRow(nested_data);
+    }
+
+    //http://stackoverflow.com/questions/288699/get-the-position-of-a-div-span-tag
+    /*
+     This function will tell you the x,y position of the element
+     relative to the page. Basically you have to loop up through
+     all the element's parents and add their offsets together.
+     */
+    function getPos(el) {
+        // yay readability
+        for (var lx=0, ly=0;
+             el != null;
+             lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+        return {x: lx,y: ly};
+    }
+
+
+
+    //
+    function drawCol(nestedData){
+//        console.log(nestedData);
+        var col;
+        var incomeLevel_data;
+
+        for(incomeLevel in nestedData) {
+            console.log("create a new col");
+            col = d3.select('#vis').select('.row')
+                    .append('div')
+                    .attr("class","col")
+                    .append('h2')
+                    .text("Income Level");
+
+            incomeLevel_data = nestedData[incomeLevel];
+
+            drawLines(incomeLevel_data);
+//            for (indicator in incomeLevel_data) {
+//                var timeseries = incomeLevel_data[indicator];
+//                // console.log(timeseries);
+//
+//                timeseries.forEach(function (d) {
+//                    //       svg.append("svg:path")
+//                    //       .data(d)
+//                    //      .attr("class", "area")
+//                    //      .attr("d", area);
+//                    console.log(d.year);
+//                    console.log(d.value);
+//                });
+//            }
+
+        }
+
+    }
+
+    function drawLines(graphData){
+        console.log(graphData);
+////        graphData = d3.map(graphData).entries();
+//        graphData = d3.map(graphData);
+//        x.domain([d3.min(graphData, function(d) { return d3.min(d.values, function (d) { return d.year; }); }),
+//            d3.max(graphData, function(d) { return d3.max(d.values, function (d) { return d.year; }); })]);
+//        y.domain([d3.min(graphData, function(d) { return d3.min(d.values, function (d) { return d.value; }); }),
+//            d3.max(graphData, function(d) { return d3.max(d.values, function (d) { return d.value; }); })]);
+//
+//        var newData;
+//        var indicators = svg.selectAll(".col")
+//                .data(graphData, function(d){return d.key;})
+//                .enter().append('g')
+//                .attr("class", "col");
+//
+//        indicators.append("path")
+//                .attr("class", "line")
+//                .attr("d", function(d) { return line(d.values); })
+//                .style("stroke", function(d) { return color(d.key); });
+
+//        var line_group = d3.selectAll('.col')
+
+
+    }
+
+
+    formatData();
+//    console.log(nested_data);
+//    drawRow(nested_data);
+</script>
+</body>
+
+ </html>

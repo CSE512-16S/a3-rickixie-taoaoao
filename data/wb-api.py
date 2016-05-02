@@ -15,18 +15,58 @@ import csv
 country_string = "LIC;MIC;LMC;UMC;HIC"
 
 #define indicators
-indicator_string = "SE.SCH.LIFE.FE"
+#education
+# indicator_string = "SE.SCH.LIFE.FE;SE.SCH.LIFE.MA;SE.ADT.1524.LT.FE.ZS;SE.ADT.1524.LT.MA.ZS;SE.PRM.CMPT.FE.ZS;SE.PRM.CMPT.MA.ZS"
+#economic
+#indicator_string = "SL.TLF.ACTI.1524.FE.ZS;SL.TLF.ACTI.1524.MA.ZS;SL.EMP.WORK.FE.ZS;SL.EMP.WORK.MA.ZS;SL.FAM.WORK.FE.ZS;SL.FAM.WORK.MA.ZS"
+#agency
+indicator_string =  "SP.M18.2024.FE.ZS;SP.ADO.TFRT;SP.DYN.CONU.ZS"
+
+#list of indicators {id:name}
+# Category1: Education 
+#
+# 	{SE.SCH.LIFE.FE:"Expected year of schooling, female"}
+# 	{SE.SCH.LIFE.MA:"Expected year of schooling, male"}
+#	
+#	{SE.ADT.1524.LT.FE.ZS:"Youth Literacy Rate (%of population age 15-24), female"}
+#	{SE.ADT.1524.LT.MA.ZS:"Youth Literacy Rate (%of population age 15-24), male"}
+#	
+# 	{SE.PRM.CMPT.FE.ZS: "Primary completion rate, female(%)"}
+# 	{SE.PRM.CMPT.MA.ZS: "Primary completion rate, male(%)"}
+
+
+# Category2: Economic Opportunity
+#
+#	{SL.TLF.ACTI.1524.FE.ZS:"Labor force participation rate, % of populationa ages 15+, female"}
+#	{SL.TLF.ACTI.1524.MA.ZS:"Labor force participation rate, % of populationa ages 15+, male"}
+#
+#	{SL.EMP.WORK.FE.ZS:"Wage and salaried workers, female (% of females employed)"}
+#	{SL.EMP.WORK.MA.ZS:"Wage and salaried workers, female (% of males employed)"}
+#
+# 	{SL.FAM.WORK.FE.ZS: "Contributing family workers (% of employed ages 15+), female"}
+#	{SL.FAM.WORK.MA.ZS: "Contributing family workers (% of employed ages 15+), female"}
+#
+
+# Category3: Agency 
+#
+# 	{SP.M18.2024.FE.ZS:"Women first married by age 18"}
+#	
+#	{SP.ADO.TFRT:"Adolescent fertility rate (birth per 1000, age 15-19)"}
+#	
+# 	{SP.DYN.CONU.ZS: "Contraceptive prevalence (% of women ages 15-49)"}
+#
+
 
 #define source: Gender Statistics is 14
 source = "14"
 
 #define year
-startYr = "2005"
-endYr = "2014"
+startYr = "2004"
+endYr = "2013"
 
 #define request url
 #http://api.worldbank.org/countries/lic;mic;lmc;umc;lmy;hic/indicators/SP.ADO.TFRT;SH.STA.BRTC.ZS?source=14&date=1965:2014&per_page=50&format=json
-url = "http://api.worldbank.org/countries/LIC;MIC;LMC;UMC;HIC/indicators/SE.SCH.LIFE.FE?source=14&date=2005:2014&per_page=600&format=json"
+url = "http://api.worldbank.org/countries/LIC;MIC;LMC;UMC;HIC/indicators/SP.M18.2024.FE.ZS;SP.ADO.TFRT;SP.DYN.CONU.ZS?source=14&date=2004:2013&per_page=600&format=json"
 # url = "http://api.worldbank.org/countries/%(country_stringP)s/indicators/%(indicator_stringP)s?source=%(sourceP)s&date=%(startYrP)s:%(endYrP)s&per_page=50&format=json"%{"country_stringP":country_string, "indicator_stringP" = indicator_string, "sourceP" = source, "startYrP"=startYr, "endYrP"=endYr}
 
 response = requests.get(url)
