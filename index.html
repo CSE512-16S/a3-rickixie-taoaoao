@@ -21,6 +21,15 @@ body {
   fill: none;
   stroke: steelblue;
   stroke-width: 1.5px;
+
+}
+.area {
+  fill: lightsteelblue;
+}
+.dot {
+  fill: white;
+  stroke: steelblue;
+  stroke-width: 1.5px;
 }
 
 </style>
@@ -49,32 +58,78 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 var line = d3.svg.line()
+    .defined(function(d){
+      // if(d.value!=null&&d.value!=undefined&&d.value!=0){
+        // console.log(d.value);
+        return d;
+      // }
+      // else{
+      //   console.log("catch null!");
+      // }
+      
+    })
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.value); });
+    .y(function(d) {      
+      return y(d.value);    
+    });
 
-var svg = d3.select("body").append("svg")
+var area = d3.svg.area()
+    .defined(line.defined())
+    .x(line.x())
+    .y1(line.y())
+    .y0(y(0));
+
+
+  var svg = d3.select("body").append("svg")
+        // .datum(nested_data['XD']['SE.SCH.LIFE.FE'].filter(function(d){return d;}))
+        // .data(nested_data['XD']['SE.SCH.LIFE.FE'].filter(function(d) { return d; }))
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-var raw_data, nested_data; //global variable
+var raw_data, nested_data, incomeLevel, indicator; //global variable
 //get the json file
-d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
-//  if(error) return console.warn(error);
+d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(error, csv){
+  if(error) return console.warn(error);
   raw_data = csv;
   nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
           .key(function(d) { return d.country_id; })
           .key(function(d) { return d.indicator_id; })
           .map(raw_data);
+          // .map(function(d){ return d.key + ',' + d.values; })
+  // .join("\n");
+     for(incomeLevel in nested_data){
+       var incomeLevel_data = nested_data[incomeLevel];
+      
+       for(indicator in incomeLevel_data){
+           var timeseries = incomeLevel_data[indicator];
+           // console.log(timeseries);
 
-  x.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
+           timeseries.forEach(function(d){
+       //       svg.append("svg:path")
+       //       .data(d)
+       //      .attr("class", "area")
+       //      .attr("d", area);
+           console.log(d.year);
+           console.log(d.value);
+       });
+       }
+
+     }
+
+
+
+  x.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.MA'], function(d) {
     return d.year;
   }));
-  y.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
-    return d.value;
-  }));
+  y.domain(
+    [15,17]
+    // d3.extent((nested_data['XD']['SE.SCH.LIFE.FE'],nested_data['XD']['SE.SCH.LIFE.MA']), function(d) {
+  //   return d.value;
+  // })
+    );
 
   svg.append("g")
       .attr("class", "x axis")
@@ -87,20 +142,26 @@ d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
 
   svg.append("path")
       .datum(nested_data['XD']['SE.SCH.LIFE.FE'])
+      // .data(nested_data['XD']['SE.SCH.LIFE.FE'].filter(function(d) { return d; }))
       .attr("class", "line")
       .attr("d", line);
+  
+  // svg.append("path")
+  //   .attr("class", "area")
+  //   .attr("d", area);
 
+  // svg.selectAll(".dot")
+  // .data(nested_data['XD']['SE.SCH.LIFE.FE'].filter(function(d) { return d; }))
+  // .enter().append("circle")
+  //   .attr("class", "dot")
+  //   .attr("cx", line.x())
+  //   .attr("cy", line.y())
+  //   .attr("r", 3.5);     
+  
   svg.append("path")
           .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
           .attr("class", "line")
           .attr("d", line)
           .style("stroke", "green");
 });
-
-//function type(d) {
-//  d.date = formatDate.parse(d.date);
-//  d.close = +d.close;
-//  return d;
-//}
-
 </script>
