@@ -6,99 +6,79 @@ body {
     font: 10px sans-serif;
     margin-top:0px;
     margin-left: 0px;
-    max-width: 1200px;
 }
 
-.svg1 {
+#svg1 {
     position:absolute;
     left:0px;
-    top:50px;
+    top:0px;
 }
-.svg2 {
+#svg2 {
     position:absolute;
     left:250px;
-    top:50px;
+    top:0px;
 }
 
-.svg3 {
+#svg3 {
     position:absolute;
     left:500px;
-    top:50px;
+    top:0px;
 }
 
-.svg4 {
+#svg4 {
     position:absolute;
     left:750px;
-    top:50px;
+    top:0px;
 }
 
-.svg5 {
+#svg5 {
     position:absolute;
     left:1000px;
-    top:50px;
+    top:0px;
 }
-
-#title{
-    font-family: 'Montserrat', sans-serif;
-    font-size:20px;
-    margin-left:50px;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size:14px;
-
-}
-
-p {
-    font-family:'Vollkorn',serif;
-    font-size:12px;
-    /*font: 10px sans-serif;*/
-    color:dimgrey;
-}
-#p1, #p6{
+#p1{
     position: absolute;
     left: 100px;
-    top: 240px;
- /*   color: steelblue;
-    font: 13px sans-serif;*/
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
 
-#p2, #p7{
+#p2{
     position: absolute;
     left: 325px;
-    top: 240px;
-    /*    color: steelblue;
-    font: 13px sans-serif;*/
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
 
-#p3, #p8{
+#p3{
     position: absolute;
     left: 600px;
-    top: 240px;
-  /*  color: steelblue;
-    font: 13px sans-serif;*/
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
-#p4, #p9{
+#p4{
     position: absolute;
     left: 820px;
-    top: 240px;
-/*    color: steelblue;
-    font: 13px sans-serif;*/
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
 
-#p5, #p10{
+#p5{
     position: absolute;
     left: 1105px;
-    top: 240px;
- /*   color: steelblue;
-    font: 13px sans-serif;*/
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #8a8a8a;
   shape-rendering: crispEdges;
 }
 
@@ -108,13 +88,13 @@ p {
 
 .fe.line {
   fill: none;
-  stroke: #e9a3c9 ;
+  stroke: #e377c2;
   stroke-width: 1.5px;
 }
 
 .ma.line {
   fill: none;
-  stroke: #a1d76a;
+  stroke: #17becf;
   stroke-width: 1.5px;
 }
 
@@ -125,131 +105,29 @@ p {
 
 /*when mouseover, show the circle*/
 .focusfe circle {
-    fill: #e9a3c9;
+    fill: #e377c2;
     stroke: none;
 }
 
 .focusma circle {
-    fill: #a1d76a;
+    fill: #17becf;
     stroke: none;
 }
-.caption{
-    position:relative;
-    margin-left: 50px;
-}
-.caption .title{
-    font-size: 15px;
-}
-.row1, .row2{
-    position: relative;
-    margin-top:20px;
-    margin-left:0px;
-    marin-bottom:20px;
-    height:300px;
-}
-
 
 </style>
 <body>
-<h1 id ="title">Gender Explorer</h1>
-<div class ="caption" class="title">
-    <p>A visualization of the World Bank Gender Statistics data.</p>
 
-    <p>In this interactive visualization, we wanted to explore the relationship between gender and opportunity. The visualization includes data from the World Bank Gender Statistics, which includes time-based parameters of different indicators. The visualization was inspired by New York Time’s tax report in 2012.
-</p>
-    <p>We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity. To see the value of different gender difference indicators, hover over the each graph to view the actual value of each year.
-</p>
-</div>
-<!--<div class="caption">-->
-    <!--<h2>Out-of-school children of primary school age, (number)</h2>-->
-    <!--<p>Girls are made up of the majority of out of school population. </p>-->
-<!--</div>-->
-
-<!--<p id="p1">High Income</p>-->
-<!--<p id="p2">Upper Middle Income</p>-->
-<!--<p id="p3">Middle Income</p>-->
-<!--<p id="p4">Lower Middle Income</p>-->
-<!--<p id="p5">Low Income</p>-->
-
-<div class="row1">
-    <div class="caption">
-        <h2>Expected year of schooling</h2>
-        <p>Except for high income country, female spent less time in education comparing to male. According to World Bank, a relatively higher schooling year have positive correlation with the overall retention rate. </p>
-    </div>
-    <p id="p1">High Income</p>
-    <p id="p2">Upper Middle Income</p>
-    <p id="p3">Middle Income</p>
-    <p id="p4">Lower Middle Income</p>
-    <p id="p5">Low Income</p>
-</div>
-<!--<div class="row2">-->
-    <!--<div class="caption">-->
-        <!--<h2>Out-of-school children of primary school age, (number)</h2>-->
-        <!--<p>Girls are made up of the majority of out of school population. </p>-->
-    <!--</div>-->
-    <!--<p id="p6">High Income</p>-->
-    <!--<p id="p7">Upper Middle Income</p>-->
-    <!--<p id="p8">Middle Income</p>-->
-    <!--<p id="p9">Lower Middle Income</p>-->
-    <!--<p id="p10">Low Income</p>-->
-<!--</div>-->
-
-
+<p id="p1">High Income</p>
+<p id="p2">Upper Middle Income</p>
+<p id="p3">Middle Income</p>
+<p id="p4">Lower Middle Income</p>
+<p id="p5">Low Income</p>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
 <script>
 
-var svg1, svg2, svg3, svg4, svg5;
-//var svg6, svg7, svg8, svg9, svg10;
-var rown;
-
-function drawRow(row){
-
-     svg1 = d3.select(row).append("svg")
-             .attr("class", row)
-            .attr("class","svg1")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-     svg2 = d3.select(row).append("svg")
-             .attr("class", row)
-            .attr("class","svg2")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-     svg3 = d3.select(row).append("svg")
-             .attr("class", row)
-            .attr("class","svg3")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-     svg4 = d3.select(row).append("svg")
-             .attr("class", row)
-            .attr("class","svg4")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-     svg5 = d3.select(row).append("svg")
-             .attr("class", row)
-            .attr("class","svg5")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    getData("education1", svg1, svg2, svg3, svg4, svg5);
-
-}
 var margin = {top: 40, right: 30, bottom: 30, left: 50},
     width = 250 - margin.left - margin.right,
     height = 200 - margin.top - margin.bottom;
@@ -263,14 +141,11 @@ var y = d3.scale.linear()
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
-        .tickSize(3)
-        .tickFormat(d3.format("0"))
     .tickValues([2013,2010,2007,2004]);
 //    .outerTickSize(2);
 
 var yAxis = d3.svg.axis()
     .scale(y)
-        .tickSize(3)
     .orient("left");
 
 var line = d3.svg.line()
@@ -279,6 +154,40 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.year);})
     .y(function(d) { return y(d.value);});
 
+var svg1 = d3.select("body").append("svg")
+    .attr("id","svg1")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg2 = d3.select("body").append("svg")
+    .attr("id","svg2")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg3 = d3.select("body").append("svg")
+        .attr("id","svg3")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg4 = d3.select("body").append("svg")
+        .attr("id","svg4")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg5 = d3.select("body").append("svg")
+        .attr("id","svg5")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function getIndex(d, time){
     var i;
@@ -291,17 +200,9 @@ function getIndex(d, time){
 
 var raw_data, nested_data; //global variable
 //get the json file
-
-
-var datafilename,female_indicator,male_indicator;
-
-
-female_indicator ="SE.SCH.LIFE.FE";
-function getData(datafilenamen, female_indicator,male_indicator){
-
-d3.csv("/data/"+datafilenamen+".csv", function(csv){
+d3.csv("wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
     //if(error) return console.warn(error);
-   raw_data = csv;
+    raw_data = csv;
     nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
           .key(function(d) { return d.country_id; })
           .key(function(d) { return d.indicator_id; })
@@ -321,18 +222,12 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
       .call(yAxis);
 
     svg1.append("path")
-//            .update()
       .datum(nested_data['XD']['SE.SCH.LIFE.FE'])
-//            .enter()
-
       .attr("class", "fe line")
       .attr("d", line);
 
     svg1.append("path")
-//            .update()
       .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
-//            .enter()
-
       .attr("class", "ma line")
       .attr("d", line);
 
@@ -347,18 +242,12 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .call(yAxis);
 
     svg2.append("path")
-//            .update()
             .datum(nested_data['XT']['SE.SCH.LIFE.FE'])
-//            .enter()
-
             .attr("class", "fe line")
             .attr("d", line);
 
     svg2.append("path")
-//            .update()
             .datum(nested_data['XT']['SE.SCH.LIFE.MA'])
-//            .enter()
-
             .attr("class", "ma line")
             .attr("d", line);
 
@@ -373,18 +262,12 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .call(yAxis);
 
     svg3.append("path")
-//            .update()
             .datum(nested_data['XP']['SE.SCH.LIFE.FE'])
-//            .enter()
-
             .attr("class", "fe line")
             .attr("d", line);
 
     svg3.append("path")
-//            .update()
             .datum(nested_data['XP']['SE.SCH.LIFE.MA'])
-//            .enter()
-
             .attr("class", "ma line")
             .attr("d", line);
 
@@ -399,18 +282,12 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .call(yAxis);
 
     svg4.append("path")
-//            .update()
             .datum(nested_data['XN']['SE.SCH.LIFE.FE'])
-//            .enter()
-
             .attr("class", "fe line")
             .attr("d", line);
 
     svg4.append("path")
-//            .update()
             .datum(nested_data['XN']['SE.SCH.LIFE.MA'])
-//            .enter()
-
             .attr("class", "ma line")
             .attr("d", line);
 
@@ -425,18 +302,12 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .call(yAxis);
 
     svg5.append("path")
-//            .update()
             .datum(nested_data['XM']['SE.SCH.LIFE.FE'])
-//            .enter()
-
             .attr("class", "fe line")
             .attr("d", line);
 
     svg5.append("path")
-//            .update()
             .datum(nested_data['XM']['SE.SCH.LIFE.MA'])
-//            .enter()
-
             .attr("class", "ma line")
             .attr("d", line);
 
@@ -469,14 +340,6 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
         .attr("class", "overlay")
         .attr("width", width)
         .attr("height", height)
-//        .on("mouseover", function() {
-//            focusfe1.style("display", null);
-//            focusma1.style("display", null);
-//        })
-//        .on("mouseout", function() {
-//            focusfe1.style("display", "none");
-//            focusma1.style("display", "none");
-//        })
         .on("mousemove", mousemove1);
 
     //svg2 interaction
@@ -508,14 +371,6 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .attr("class", "overlay")
             .attr("width", width)
             .attr("height", height)
-//            .on("mouseover", function() {
-//                focusfe2.style("display", null);
-//                focusma2.style("display", null);
-//            })
-//            .on("mouseout", function() {
-//                focusfe2.style("display", "none");
-//                focusma2.style("display", "none");
-//            })
             .on("mousemove", mousemove2);
 
     //svg3 interaction
@@ -547,14 +402,6 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .attr("class", "overlay")
             .attr("width", width)
             .attr("height", height)
-//            .on("mouseover", function() {
-//                focusfe3.style("display", null);
-//                focusma3.style("display", null);
-//            })
-//            .on("mouseout", function() {
-//                focusfe3.style("display", "none");
-//                focusma3.style("display", "none");
-//            })
             .on("mousemove", mousemove3);
 
     //svg4 interaction
@@ -586,14 +433,6 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .attr("class", "overlay")
             .attr("width", width)
             .attr("height", height)
-//            .on("mouseover", function() {
-//                focusfe4.style("display", null);
-//                focusma4.style("display", null);
-//            })
-//            .on("mouseout", function() {
-//                focusfe4.style("display", "none");
-//                focusma4.style("display", "none");
-//            })
             .on("mousemove", mousemove4);
 
     //svg5 interaction
@@ -625,121 +464,7 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             .attr("class", "overlay")
             .attr("width", width)
             .attr("height", height)
-//            .on("mouseover", function() {
-//                focusfe5.style("display", null);
-//                focusma5.style("display", null);
-//            })
-//            .on("mouseout", function() {
-//                focusfe5.style("display", "none");
-//                focusma5.style("display", "none");
-//            })
             .on("mousemove", mousemove5);
-
-//    function mousemove1() {
-//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
-//                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XD']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XD']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma];
-//
-//        //see which year is closer
-//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
-//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
-//
-//        focusma1.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
-//        focusma1.select("text").text(Number(dma.value).toFixed(2));
-//
-//        focusfe1.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
-//        focusfe1.select("text").text(Number(dfe.value).toFixed(2));
-//    }
-//
-//    function mousemove2() {
-//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
-//                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XT']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XT']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma];
-//
-//        //see which year is closer
-//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
-//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
-//
-//        focusma2.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
-//        focusma2.select("text").text(Number(dma.value).toFixed(2));
-//
-//        focusfe2.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
-//        focusfe2.select("text").text(Number(dfe.value).toFixed(2));
-//    }
-//
-//    function mousemove3() {
-//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
-//                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XP']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XP']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma];
-//
-//        //see which year is closer
-//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
-//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
-//
-//        focusma3.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
-//        focusma3.select("text").text(Number(dma.value).toFixed(2));
-//
-//        focusfe3.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
-//        focusfe3.select("text").text(Number(dfe.value).toFixed(2));
-//    }
-//
-//    function mousemove4() {
-//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
-//                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XN']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XN']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma];
-//
-//        //see which year is closer
-//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
-//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
-//
-//        focusma4.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
-//        focusma4.select("text").text(Number(dma.value).toFixed(2));
-//
-//        focusfe4.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
-//        focusfe4.select("text").text(Number(dfe.value).toFixed(2));
-//    }
-//
-//    function mousemove5() {
-//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
-//                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XM']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XM']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma];
-//
-//        //see which year is closer
-//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
-//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
-//
-//        focusma5.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
-//        focusma5.select("text").text(Number(dma.value).toFixed(2));
-//
-//        focusfe5.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
-//        focusfe5.select("text").text(Number(dfe.value).toFixed(2));
-//    }
-//    console.log(nested_data);
 
     function mousemove1() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
@@ -1012,18 +737,5 @@ d3.csv("/data/"+datafilenamen+".csv", function(csv){
             });
 });
 
-
-}
-//rown = "row1";
-    drawRow(".row1");
-//    drawRow(".row2");
-
-
-//    getData("education1");
-
-//rown = "row2";
-//    drawRow(".row1", svg6, svg7, svg8, svg9, svg10);
-
-//    getData("education1");
 
 </script>
