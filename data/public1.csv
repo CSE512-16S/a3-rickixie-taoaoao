@@ -1,0 +1,51 @@
+country_id,country_value,year,indicator_id,indicator_name,value
+XD,High income,2013,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),24.5005456899741
+XD,High income,2012,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),23.5646494798734
+XD,High income,2011,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),23.0549008960087
+XD,High income,2010,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),22.550619181054
+XD,High income,2009,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),22.4713626910209
+XD,High income,2008,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),21.939556561086
+XD,High income,2007,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),21.8960970750702
+XD,High income,2006,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),20.7924041431946
+XD,High income,2005,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),20.3359399180701
+XD,High income,2004,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.6474546300605
+XM,Low income,2013,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),22.9635696088716
+XM,Low income,2012,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),22.0739979138727
+XM,Low income,2011,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),21.8908748233077
+XM,Low income,2010,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.6188624787776
+XM,Low income,2009,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.5697310513447
+XM,Low income,2008,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),20.0064445932374
+XM,Low income,2007,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),18.5825438139858
+XM,Low income,2006,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.7434645115952
+XM,Low income,2005,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.677000352485
+XM,Low income,2004,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),15.2534039631156
+XN,Lower middle income,2013,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),16.291621504444
+XN,Lower middle income,2012,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),15.1099155892724
+XN,Lower middle income,2011,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),14.2421339482235
+XN,Lower middle income,2010,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),14.5067275042445
+XN,Lower middle income,2009,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),13.8749833222148
+XN,Lower middle income,2008,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),12.7417653026716
+XN,Lower middle income,2007,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),12.7228104276241
+XN,Lower middle income,2006,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),11.9174285714286
+XN,Lower middle income,2005,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),11.5189926780564
+XN,Lower middle income,2004,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),10.4937199687116
+XP,Middle income,2013,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.9814140639969
+XP,Middle income,2012,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),18.8703066781313
+XP,Middle income,2011,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.4983341357727
+XP,Middle income,2010,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.2706712776541
+XP,Middle income,2009,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.0372217102391
+XP,Middle income,2008,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),16.1015315670245
+XP,Middle income,2007,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),15.4813815300817
+XP,Middle income,2006,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),14.710121656898
+XP,Middle income,2005,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),14.0639213549921
+XP,Middle income,2004,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),14.0121663244353
+XT,Upper middle income,2013,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),22.9034763948498
+XT,Upper middle income,2012,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),21.9107818574514
+XT,Upper middle income,2011,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),20.2650458633894
+XT,Upper middle income,2010,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.4998031664527
+XT,Upper middle income,2009,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),19.484195130345
+XT,Upper middle income,2008,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),18.7079580236117
+XT,Upper middle income,2007,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.5886802340816
+XT,Upper middle income,2006,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),16.9785771668303
+XT,Upper middle income,2005,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),16.1161656825908
+XT,Upper middle income,2004,SG.GEN.PARL.ZS,Proportion of seats held by women in national parliaments (%),17.0020605830405

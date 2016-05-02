@@ -1,0 +1,101 @@
+country_id,country_value,year,indicator_id,indicator_name,value
+XD,High income,2013,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",98.94553
+XD,High income,2012,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",98.73779
+XD,High income,2011,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",98.44634
+XD,High income,2010,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",98.37357
+XD,High income,2009,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",97.93457
+XD,High income,2008,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",97.36577
+XD,High income,2007,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",97.21498
+XD,High income,2006,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",96.3083
+XD,High income,2005,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",96.19998
+XD,High income,2004,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",96.80234
+XM,Low income,2013,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",69.50674
+XM,Low income,2012,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",69.37691
+XM,Low income,2011,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",68.51527
+XM,Low income,2010,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",66.35794
+XM,Low income,2009,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",65.2527
+XM,Low income,2008,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",62.11959
+XM,Low income,2007,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",60.20192
+XM,Low income,2006,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",58.91962
+XM,Low income,2005,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",56.80042
+XM,Low income,2004,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",53.99283
+XN,Lower middle income,2013,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",90.218
+XN,Lower middle income,2012,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",90.5
+XN,Lower middle income,2011,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",89.32956
+XN,Lower middle income,2010,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",90.14715
+XN,Lower middle income,2009,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",89.49128
+XN,Lower middle income,2008,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",87.93916
+XN,Lower middle income,2007,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",86.19178
+XN,Lower middle income,2006,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",84.34129
+XN,Lower middle income,2005,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",82.27352
+XN,Lower middle income,2004,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",80.23865
+XP,Middle income,2013,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",95.5098
+XP,Middle income,2012,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",95.56269
+XP,Middle income,2011,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",94.82363
+XP,Middle income,2010,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",95.32378
+XP,Middle income,2009,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",95.07436
+XP,Middle income,2008,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",93.55297
+XP,Middle income,2007,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",91.68436
+XP,Middle income,2006,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",89.96049
+XP,Middle income,2005,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",88.52625
+XP,Middle income,2004,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",87.08485
+XT,Upper middle income,2013,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",
+XT,Upper middle income,2012,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",
+XT,Upper middle income,2011,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",
+XT,Upper middle income,2010,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",102.93653
+XT,Upper middle income,2009,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",103.02307
+XT,Upper middle income,2008,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",101.26002
+XT,Upper middle income,2007,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",98.97725
+XT,Upper middle income,2006,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",97.18493
+XT,Upper middle income,2005,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",96.27141
+XT,Upper middle income,2004,SE.PRM.CMPT.FE.ZS,"Primary completion rate, female (% of relevant age group)",95.19449
+XD,High income,2013,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",98.25956
+XD,High income,2012,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.88732
+XD,High income,2011,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.67308
+XD,High income,2010,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.74475
+XD,High income,2009,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.29311
+XD,High income,2008,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.05602
+XD,High income,2007,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.69604
+XD,High income,2006,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",95.71156
+XD,High income,2005,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",95.92435
+XD,High income,2004,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.63058
+XM,Low income,2013,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",72.49038
+XM,Low income,2012,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",72.95303
+XM,Low income,2011,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",72.51224
+XM,Low income,2010,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",70.75433
+XM,Low income,2009,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",70.96506
+XM,Low income,2008,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",68.31596
+XM,Low income,2007,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",66.81107
+XM,Low income,2006,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",65.92066
+XM,Low income,2005,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",64.66859
+XM,Low income,2004,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",62.48362
+XN,Lower middle income,2013,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",92.0424
+XN,Lower middle income,2012,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",92.43779
+XN,Lower middle income,2011,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",91.39956
+XN,Lower middle income,2010,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",92.29327
+XN,Lower middle income,2009,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",91.90153
+XN,Lower middle income,2008,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",91.0629
+XN,Lower middle income,2007,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",90.58849
+XN,Lower middle income,2006,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",89.54858
+XN,Lower middle income,2005,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",88.18932
+XN,Lower middle income,2004,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",86.58224
+XP,Middle income,2013,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.01329
+XP,Middle income,2012,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.13903
+XP,Middle income,2011,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.45734
+XP,Middle income,2010,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.92433
+XP,Middle income,2009,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.77324
+XP,Middle income,2008,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",95.68127
+XP,Middle income,2007,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",94.3527
+XP,Middle income,2006,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",93.07644
+XP,Middle income,2005,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",91.76526
+XP,Middle income,2004,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",90.61436
+XT,Upper middle income,2013,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",
+XT,Upper middle income,2012,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",
+XT,Upper middle income,2011,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",
+XT,Upper middle income,2010,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",103.66293
+XT,Upper middle income,2009,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",103.63483
+XT,Upper middle income,2008,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",101.9542
+XT,Upper middle income,2007,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",99.29762
+XT,Upper middle income,2006,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",97.56328
+XT,Upper middle income,2005,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",96.15231
+XT,Upper middle income,2004,SE.PRM.CMPT.MA.ZS,"Primary completion rate, male (% of relevant age group)",95.35044

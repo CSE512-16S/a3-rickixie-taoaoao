@@ -1,0 +1,101 @@
+country_id,country_value,year,indicator_id,indicator_name,value
+XD,High income,2013,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",41.4771701590753
+XD,High income,2012,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",41.1713127385589
+XD,High income,2011,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",41.2841661482863
+XD,High income,2010,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",41.5515747334931
+XD,High income,2009,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",42.6949198791995
+XD,High income,2008,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",43.4198905784082
+XD,High income,2007,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",43.4064637271023
+XD,High income,2006,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",43.712368524271
+XD,High income,2005,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",43.6666888439835
+XD,High income,2004,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",43.5316310145319
+XM,Low income,2013,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",61.5791984856311
+XM,Low income,2012,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",61.7910794143838
+XM,Low income,2011,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",61.9791475509695
+XM,Low income,2010,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",62.178175706216
+XM,Low income,2009,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",62.3240889241974
+XM,Low income,2008,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",62.458617856277
+XM,Low income,2007,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",62.5830889031911
+XM,Low income,2006,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",62.8358847562284
+XM,Low income,2005,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",63.0339025762224
+XM,Low income,2004,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",63.178559333567
+XN,Lower middle income,2013,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",28.5053922561184
+XN,Lower middle income,2012,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",28.486447126925
+XN,Lower middle income,2011,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",28.8465138849369
+XN,Lower middle income,2010,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",29.1826977654958
+XN,Lower middle income,2009,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",29.8657912609819
+XN,Lower middle income,2008,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",30.5690151407005
+XN,Lower middle income,2007,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",31.4080701958052
+XN,Lower middle income,2006,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",32.4755368799304
+XN,Lower middle income,2005,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",33.4666098055246
+XN,Lower middle income,2004,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",33.4978809812483
+XP,Middle income,2013,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",35.3873535880468
+XP,Middle income,2012,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",35.563116821569
+XP,Middle income,2011,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",35.8839810931814
+XP,Middle income,2010,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",36.0568218628652
+XP,Middle income,2009,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",36.8238289398112
+XP,Middle income,2008,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",37.5540977097159
+XP,Middle income,2007,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",38.2715291827171
+XP,Middle income,2006,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",39.1204275423354
+XP,Middle income,2005,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",40.0718309490827
+XP,Middle income,2004,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",40.3733525419392
+XT,Upper middle income,2013,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",45.135679843114
+XT,Upper middle income,2012,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",45.1787540536736
+XT,Upper middle income,2011,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",45.1128687322497
+XT,Upper middle income,2010,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",44.830826367232
+XT,Upper middle income,2009,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",45.5277552615748
+XT,Upper middle income,2008,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",46.1803944140711
+XT,Upper middle income,2007,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",46.6878614607015
+XT,Upper middle income,2006,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",47.2434665952135
+XT,Upper middle income,2005,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",48.1431766938375
+XT,Upper middle income,2004,SL.TLF.ACTI.1524.FE.ZS,"Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)",48.8079023397468
+XD,High income,2013,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",47.5403416052477
+XD,High income,2012,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",47.4129297940823
+XD,High income,2011,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",47.5472844709584
+XD,High income,2010,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",47.8491067691993
+XD,High income,2009,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",48.8534215567744
+XD,High income,2008,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",50.1447504506613
+XD,High income,2007,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",49.9963308751685
+XD,High income,2006,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",50.3465750423008
+XD,High income,2005,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",50.0486738904393
+XD,High income,2004,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",50.1484694175475
+XM,Low income,2013,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",65.9556676854895
+XM,Low income,2012,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.0230531846367
+XM,Low income,2011,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.0992573799931
+XM,Low income,2010,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.1773278175078
+XM,Low income,2009,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.25279609541
+XM,Low income,2008,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.3152917210902
+XM,Low income,2007,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",66.643632612404
+XM,Low income,2006,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",67.058801812407
+XM,Low income,2005,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",67.4630595748517
+XM,Low income,2004,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",67.6030704775331
+XN,Lower middle income,2013,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",54.2566163640549
+XN,Lower middle income,2012,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",54.3290819266869
+XN,Lower middle income,2011,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",55.0877086417916
+XN,Lower middle income,2010,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",55.7894012648783
+XN,Lower middle income,2009,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.8572759617717
+XN,Lower middle income,2008,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",57.8970897539318
+XN,Lower middle income,2007,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",59.008062701803
+XN,Lower middle income,2006,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",60.3671278032521
+XN,Lower middle income,2005,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",61.6615282368306
+XN,Lower middle income,2004,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",61.6674779106102
+XP,Middle income,2013,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",55.3752470792809
+XP,Middle income,2012,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",55.4364031282136
+XP,Middle income,2011,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",55.8038772688554
+XP,Middle income,2010,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.0995599634528
+XP,Middle income,2009,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.9936665841988
+XP,Middle income,2008,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",57.846629256053
+XP,Middle income,2007,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",58.585801323607
+XP,Middle income,2006,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",59.5619845299097
+XP,Middle income,2005,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",60.6139563390854
+XP,Middle income,2004,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",60.9022044943061
+XT,Upper middle income,2013,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.9431803414563
+XT,Upper middle income,2012,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.9262261118503
+XT,Upper middle income,2011,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.7343767204669
+XT,Upper middle income,2010,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",56.4920047856281
+XT,Upper middle income,2009,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",57.1630841094556
+XT,Upper middle income,2008,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",57.784624707982
+XT,Upper middle income,2007,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",58.069404927079
+XT,Upper middle income,2006,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",58.5779370234059
+XT,Upper middle income,2005,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",59.3307467041621
+XT,Upper middle income,2004,SL.TLF.ACTI.1524.MA.ZS,"Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)",59.9593954513096

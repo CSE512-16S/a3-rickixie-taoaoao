@@ -1,0 +1,51 @@
+country_id,country_value,year,indicator_id,indicator_name,value
+XD,High income,2013,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",20.9701595316292
+XD,High income,2012,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",22.1858841085604
+XD,High income,2011,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",22.9293218360865
+XD,High income,2010,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",23.6604926198272
+XD,High income,2009,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",24.3772420694159
+XD,High income,2008,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",25.0756104842787
+XD,High income,2007,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",25.749843748277
+XD,High income,2006,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",26.000520910088
+XD,High income,2005,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",26.2332060830947
+XD,High income,2004,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",26.4505587993309
+XM,Low income,2013,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",100.581062844135
+XM,Low income,2012,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",102.98797167545
+XM,Low income,2011,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",105.337214241082
+XM,Low income,2010,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",107.690903219994
+XM,Low income,2009,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",110.006094007219
+XM,Low income,2008,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",112.32094970225
+XM,Low income,2007,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",114.611635192591
+XM,Low income,2006,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",116.447095107972
+XM,Low income,2005,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",118.231373278871
+XM,Low income,2004,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",119.950755072455
+XN,Lower middle income,2013,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",48.4810467239983
+XN,Lower middle income,2012,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",49.9037273470544
+XN,Lower middle income,2011,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",51.2903042589338
+XN,Lower middle income,2010,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",52.6822421187181
+XN,Lower middle income,2009,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",54.0730932824281
+XN,Lower middle income,2008,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",55.4640040262076
+XN,Lower middle income,2007,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",56.864119440562
+XN,Lower middle income,2006,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",58.6024843083294
+XN,Lower middle income,2005,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",60.3592802221853
+XN,Lower middle income,2004,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",62.1306648696502
+XP,Middle income,2013,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",41.5992698680579
+XP,Middle income,2012,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",42.1070794708174
+XP,Middle income,2011,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",42.4804474112186
+XP,Middle income,2010,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",42.8370088477961
+XP,Middle income,2009,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",43.1648266466694
+XP,Middle income,2008,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",43.4660066050003
+XP,Middle income,2007,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",43.8245739015393
+XP,Middle income,2006,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",44.608771792687
+XP,Middle income,2005,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",45.6262162924572
+XP,Middle income,2004,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",46.8874996232039
+XT,Upper middle income,2013,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",30.6152738266624
+XT,Upper middle income,2012,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",30.1818054243088
+XT,Upper middle income,2011,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",29.5828706456689
+XT,Upper middle income,2010,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",29.0367728818356
+XT,Upper middle income,2009,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",28.5331398344411
+XT,Upper middle income,2008,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",28.0648971611282
+XT,Upper middle income,2007,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",27.7260908563557
+XT,Upper middle income,2006,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",27.7981071198139
+XT,Upper middle income,2005,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",28.1531513546224
+XT,Upper middle income,2004,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)",28.8101165962528
