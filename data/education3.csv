@@ -1,0 +1,101 @@
+country_id,country_value,year,indicator_id,indicator_name,value
+XD,High income,2013,SE.PRM.UNER.FE,"Children out of school, primary, female",1366601
+XD,High income,2012,SE.PRM.UNER.FE,"Children out of school, primary, female",1307597
+XD,High income,2011,SE.PRM.UNER.FE,"Children out of school, primary, female",1273953
+XD,High income,2010,SE.PRM.UNER.FE,"Children out of school, primary, female",1229239
+XD,High income,2009,SE.PRM.UNER.FE,"Children out of school, primary, female",1149315
+XD,High income,2008,SE.PRM.UNER.FE,"Children out of school, primary, female",1183508
+XD,High income,2007,SE.PRM.UNER.FE,"Children out of school, primary, female",1324870
+XD,High income,2006,SE.PRM.UNER.FE,"Children out of school, primary, female",1498975
+XD,High income,2005,SE.PRM.UNER.FE,"Children out of school, primary, female",1743235
+XD,High income,2004,SE.PRM.UNER.FE,"Children out of school, primary, female",1686485
+XM,Low income,2013,SE.PRM.UNER.FE,"Children out of school, primary, female",10811102
+XM,Low income,2012,SE.PRM.UNER.FE,"Children out of school, primary, female",10746154
+XM,Low income,2011,SE.PRM.UNER.FE,"Children out of school, primary, female",10945508
+XM,Low income,2010,SE.PRM.UNER.FE,"Children out of school, primary, female",11238135
+XM,Low income,2009,SE.PRM.UNER.FE,"Children out of school, primary, female",11096050
+XM,Low income,2008,SE.PRM.UNER.FE,"Children out of school, primary, female",11593467
+XM,Low income,2007,SE.PRM.UNER.FE,"Children out of school, primary, female",12240549
+XM,Low income,2006,SE.PRM.UNER.FE,"Children out of school, primary, female",12890687
+XM,Low income,2005,SE.PRM.UNER.FE,"Children out of school, primary, female",13935424
+XM,Low income,2004,SE.PRM.UNER.FE,"Children out of school, primary, female",14780639
+XN,Lower middle income,2013,SE.PRM.UNER.FE,"Children out of school, primary, female",14559303
+XN,Lower middle income,2012,SE.PRM.UNER.FE,"Children out of school, primary, female",14073442
+XN,Lower middle income,2011,SE.PRM.UNER.FE,"Children out of school, primary, female",13889975
+XN,Lower middle income,2010,SE.PRM.UNER.FE,"Children out of school, primary, female",14232227
+XN,Lower middle income,2009,SE.PRM.UNER.FE,"Children out of school, primary, female",15403719
+XN,Lower middle income,2008,SE.PRM.UNER.FE,"Children out of school, primary, female",15642397
+XN,Lower middle income,2007,SE.PRM.UNER.FE,"Children out of school, primary, female",16181695
+XN,Lower middle income,2006,SE.PRM.UNER.FE,"Children out of school, primary, female",19145224
+XN,Lower middle income,2005,SE.PRM.UNER.FE,"Children out of school, primary, female",20899574
+XN,Lower middle income,2004,SE.PRM.UNER.FE,"Children out of school, primary, female",21986910
+XP,Middle income,2013,SE.PRM.UNER.FE,"Children out of school, primary, female",18710602
+XP,Middle income,2012,SE.PRM.UNER.FE,"Children out of school, primary, female",18131064
+XP,Middle income,2011,SE.PRM.UNER.FE,"Children out of school, primary, female",17836292
+XP,Middle income,2010,SE.PRM.UNER.FE,"Children out of school, primary, female",18075414
+XP,Middle income,2009,SE.PRM.UNER.FE,"Children out of school, primary, female",19189614
+XP,Middle income,2008,SE.PRM.UNER.FE,"Children out of school, primary, female",19530076
+XP,Middle income,2007,SE.PRM.UNER.FE,"Children out of school, primary, female",20237052
+XP,Middle income,2006,SE.PRM.UNER.FE,"Children out of school, primary, female",23764040
+XP,Middle income,2005,SE.PRM.UNER.FE,"Children out of school, primary, female",25296714
+XP,Middle income,2004,SE.PRM.UNER.FE,"Children out of school, primary, female",26184674
+XT,Upper middle income,2013,SE.PRM.UNER.FE,"Children out of school, primary, female",4151299
+XT,Upper middle income,2012,SE.PRM.UNER.FE,"Children out of school, primary, female",4057622
+XT,Upper middle income,2011,SE.PRM.UNER.FE,"Children out of school, primary, female",3946316
+XT,Upper middle income,2010,SE.PRM.UNER.FE,"Children out of school, primary, female",3843187
+XT,Upper middle income,2009,SE.PRM.UNER.FE,"Children out of school, primary, female",3785895
+XT,Upper middle income,2008,SE.PRM.UNER.FE,"Children out of school, primary, female",3887678
+XT,Upper middle income,2007,SE.PRM.UNER.FE,"Children out of school, primary, female",4055357
+XT,Upper middle income,2006,SE.PRM.UNER.FE,"Children out of school, primary, female",4618817
+XT,Upper middle income,2005,SE.PRM.UNER.FE,"Children out of school, primary, female",4397140
+XT,Upper middle income,2004,SE.PRM.UNER.FE,"Children out of school, primary, female",4197765
+XD,High income,2013,SE.PRM.UNER.MA,"Children out of school, primary, male",1549916
+XD,High income,2012,SE.PRM.UNER.MA,"Children out of school, primary, male",1549136
+XD,High income,2011,SE.PRM.UNER.MA,"Children out of school, primary, male",1626128
+XD,High income,2010,SE.PRM.UNER.MA,"Children out of school, primary, male",1435080
+XD,High income,2009,SE.PRM.UNER.MA,"Children out of school, primary, male",1458254
+XD,High income,2008,SE.PRM.UNER.MA,"Children out of school, primary, male",1306675
+XD,High income,2007,SE.PRM.UNER.MA,"Children out of school, primary, male",1492922
+XD,High income,2006,SE.PRM.UNER.MA,"Children out of school, primary, male",1746736
+XD,High income,2005,SE.PRM.UNER.MA,"Children out of school, primary, male",1946740
+XD,High income,2004,SE.PRM.UNER.MA,"Children out of school, primary, male",1866952
+XM,Low income,2013,SE.PRM.UNER.MA,"Children out of school, primary, male",9148894
+XM,Low income,2012,SE.PRM.UNER.MA,"Children out of school, primary, male",9041904
+XM,Low income,2011,SE.PRM.UNER.MA,"Children out of school, primary, male",9224646
+XM,Low income,2010,SE.PRM.UNER.MA,"Children out of school, primary, male",9551713
+XM,Low income,2009,SE.PRM.UNER.MA,"Children out of school, primary, male",9636973
+XM,Low income,2008,SE.PRM.UNER.MA,"Children out of school, primary, male",9572252
+XM,Low income,2007,SE.PRM.UNER.MA,"Children out of school, primary, male",10322548
+XM,Low income,2006,SE.PRM.UNER.MA,"Children out of school, primary, male",11204684
+XM,Low income,2005,SE.PRM.UNER.MA,"Children out of school, primary, male",11898488
+XM,Low income,2004,SE.PRM.UNER.MA,"Children out of school, primary, male",12864892
+XN,Lower middle income,2013,SE.PRM.UNER.MA,"Children out of school, primary, male",13979659
+XN,Lower middle income,2012,SE.PRM.UNER.MA,"Children out of school, primary, male",13440229
+XN,Lower middle income,2011,SE.PRM.UNER.MA,"Children out of school, primary, male",12980440
+XN,Lower middle income,2010,SE.PRM.UNER.MA,"Children out of school, primary, male",11793895
+XN,Lower middle income,2009,SE.PRM.UNER.MA,"Children out of school, primary, male",11989319
+XN,Lower middle income,2008,SE.PRM.UNER.MA,"Children out of school, primary, male",11890894
+XN,Lower middle income,2007,SE.PRM.UNER.MA,"Children out of school, primary, male",10909913
+XN,Lower middle income,2006,SE.PRM.UNER.MA,"Children out of school, primary, male",12871392
+XN,Lower middle income,2005,SE.PRM.UNER.MA,"Children out of school, primary, male",13545710
+XN,Lower middle income,2004,SE.PRM.UNER.MA,"Children out of school, primary, male",15185833
+XP,Middle income,2013,SE.PRM.UNER.MA,"Children out of school, primary, male",17668260
+XP,Middle income,2012,SE.PRM.UNER.MA,"Children out of school, primary, male",17089904
+XP,Middle income,2011,SE.PRM.UNER.MA,"Children out of school, primary, male",16563209
+XP,Middle income,2010,SE.PRM.UNER.MA,"Children out of school, primary, male",15364509
+XP,Middle income,2009,SE.PRM.UNER.MA,"Children out of school, primary, male",15512095
+XP,Middle income,2008,SE.PRM.UNER.MA,"Children out of school, primary, male",15566901
+XP,Middle income,2007,SE.PRM.UNER.MA,"Children out of school, primary, male",14561522
+XP,Middle income,2006,SE.PRM.UNER.MA,"Children out of school, primary, male",17105846
+XP,Middle income,2005,SE.PRM.UNER.MA,"Children out of school, primary, male",17248692
+XP,Middle income,2004,SE.PRM.UNER.MA,"Children out of school, primary, male",18580552
+XT,Upper middle income,2013,SE.PRM.UNER.MA,"Children out of school, primary, male",3688601
+XT,Upper middle income,2012,SE.PRM.UNER.MA,"Children out of school, primary, male",3649674
+XT,Upper middle income,2011,SE.PRM.UNER.MA,"Children out of school, primary, male",3582769
+XT,Upper middle income,2010,SE.PRM.UNER.MA,"Children out of school, primary, male",3570613
+XT,Upper middle income,2009,SE.PRM.UNER.MA,"Children out of school, primary, male",3522776
+XT,Upper middle income,2008,SE.PRM.UNER.MA,"Children out of school, primary, male",3676007
+XT,Upper middle income,2007,SE.PRM.UNER.MA,"Children out of school, primary, male",3651609
+XT,Upper middle income,2006,SE.PRM.UNER.MA,"Children out of school, primary, male",4234454
+XT,Upper middle income,2005,SE.PRM.UNER.MA,"Children out of school, primary, male",3702983
+XT,Upper middle income,2004,SE.PRM.UNER.MA,"Children out of school, primary, male",3394718
