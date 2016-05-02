@@ -8,7 +8,7 @@ a3-rickixie-taoaoao
 
 ## World Bank Gender Data Explorer 
 
-![Thumbnail](thumbnail.gif)
+![Thumbnail](thumbnail.png)
 
 A visualization of the [World Bank Gender Statistics data] (http://datatopics.worldbank.org/gender/home).
 
