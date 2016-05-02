@@ -41,7 +41,6 @@ We also prototyped our design with Tableau as shown below.
 
 ### Changes between Storyboard and the Final Implementation
 
-A paragraph explaining changes between the storyboard and the final implementation.
 ####Design Decision
 We utilized both the [ColorBrewer](http://colorbrewer2.org/) and Tableau's color palette to choose our color encoding of the gender data, we used the NoCoffee visual simulator to double check our color palletee. We also paired a san-serif font serif font to balance our design.
 
@@ -61,7 +60,7 @@ Include:
   - Roughly how much time did you spend developing your application?
     - Research and finalized the data sets: 2 days
     - Processed and retrieving the data from world bank: 1 day (included learning python)
-    - Building the data visulization: 3 days+..
+    - Building the data visulization: 3 days+
   - What aspects took the most time?
-    - Both of us had no prior experience with d3.js and limited experience with javascript, so learning about d3 with the formatted the data took is the most time. We may also scale up the challenges than what we can do in the time that allowed. 
+    - Both of us had no prior experience with d3.js and limited experience with javascript, so learning about d3 with the formatted the data took the most time. We may also scale up the challenges more than what we can do with the time that allowed. 
 
