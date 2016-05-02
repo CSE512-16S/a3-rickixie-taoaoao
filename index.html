@@ -9,30 +9,30 @@ body {
     max-width: 1200px;
 }
 
-.svg1 {
+.svg1, .svg6{
     position:absolute;
     left:0px;
     top:50px;
 }
-.svg2 {
+.svg2, .svg7 {
     position:absolute;
     left:250px;
     top:50px;
 }
 
-.svg3 {
+.svg3, .svg8 {
     position:absolute;
     left:500px;
     top:50px;
 }
 
-.svg4 {
+.svg4, .svg9 {
     position:absolute;
     left:750px;
     top:50px;
 }
 
-.svg5 {
+.svg5, .svg10{
     position:absolute;
     left:1000px;
     top:50px;
@@ -108,13 +108,13 @@ p {
 
 .fe.line {
   fill: none;
-  stroke: #e9a3c9 ;
+  stroke: #e377c3 ;
   stroke-width: 1.5px;
 }
 
 .ma.line {
   fill: none;
-  stroke: #a1d76a;
+  stroke: #17becf;
   stroke-width: 1.5px;
 }
 
@@ -125,12 +125,12 @@ p {
 
 /*when mouseover, show the circle*/
 .focusfe circle {
-    fill: #e9a3c9;
+    fill: #e377c3;
     stroke: none;
 }
 
 .focusma circle {
-    fill: #a1d76a;
+    fill: #17becf;
     stroke: none;
 }
 .caption{
@@ -158,24 +158,11 @@ p {
     <p>In this interactive visualization, we wanted to explore the relationship between gender and opportunity. The visualization includes data from the World Bank Gender Statistics, which includes time-based parameters of different indicators. The visualization was inspired by New York Time’s tax report in 2012.
 </p>
     <p>We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity.</p> 
-    <p>To see the value of different gender difference indicators, hover over the each graph to view the actual value of each year. Female lines are shown in pink while the male lines are shown in green.
+    <p>To see the value of different gender difference indicators, hover over the each graph to view the actual value of each year. Female lines are shown in pink while the male lines are shown in blue.
 </p>
-<<<<<<< HEAD
-  <p>Female lines are shown in pink while the male lines are shown in green.</p>
-=======
-    <p>Female lines are shown in pink while the male lines are shown in green.</p>
->>>>>>> gh-pages
-</div>
-<!--<div class="caption">-->
-    <!--<h2>Out-of-school children of primary school age, (number)</h2>-->
-    <!--<p>Girls are made up of the majority of out of school population. </p>-->
-<!--</div>-->
 
-<!--<p id="p1">High Income</p>-->
-<!--<p id="p2">Upper Middle Income</p>-->
-<!--<p id="p3">Middle Income</p>-->
-<!--<p id="p4">Lower Middle Income</p>-->
-<!--<p id="p5">Low Income</p>-->
+</div>
+
 
 <div class="row1">
     <div class="caption">
@@ -188,6 +175,7 @@ p {
     <p id="p4">Lower Middle Income</p>
     <p id="p5">Low Income</p>
 </div>
+
 <!--<div class="row2">-->
     <!--<div class="caption">-->
         <!--<h2>Out-of-school children of primary school age, (number)</h2>-->
@@ -208,12 +196,12 @@ p {
 <script>
 
 var svg1, svg2, svg3, svg4, svg5;
-//var svg6, svg7, svg8, svg9, svg10;
+var svg6, svg7, svg8, svg9, svg10;
 var rown;
 
 function drawRow(row){
 
-     svg1 = d3.select(row).append("svg")
+    svg1 = d3.select(row).append("svg")
              .attr("class", row)
             .attr("class","svg1")
             .attr("width", width + margin.left + margin.right)
@@ -221,7 +209,7 @@ function drawRow(row){
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     svg2 = d3.select(row).append("svg")
+    svg2 = d3.select(row).append("svg")
              .attr("class", row)
             .attr("class","svg2")
             .attr("width", width + margin.left + margin.right)
@@ -229,7 +217,7 @@ function drawRow(row){
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     svg3 = d3.select(row).append("svg")
+    svg3 = d3.select(row).append("svg")
              .attr("class", row)
             .attr("class","svg3")
             .attr("width", width + margin.left + margin.right)
@@ -237,7 +225,7 @@ function drawRow(row){
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     svg4 = d3.select(row).append("svg")
+    svg4 = d3.select(row).append("svg")
              .attr("class", row)
             .attr("class","svg4")
             .attr("width", width + margin.left + margin.right)
@@ -245,15 +233,63 @@ function drawRow(row){
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-     svg5 = d3.select(row).append("svg")
+    svg5 = d3.select(row).append("svg")
              .attr("class", row)
             .attr("class","svg5")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    female_indicator ="SE.SCH.LIFE.FE";
+    male_indicator ="SE.SCH.LIFE.MA"
+    getData("education1", female_indicator, male_indicator);
 
-    getData("education1");
+}
+function drawRow2(row){
+
+    svg6 = d3.select(row).append("svg")
+            .attr("class", row)
+            .attr("class","svg6")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg7 = d3.select(row).append("svg")
+            .attr("class", row)
+            .attr("class","svg7")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg8 = d3.select(row).append("svg")
+            .attr("class", row)
+            .attr("class","svg8")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg9 = d3.select(row).append("svg")
+            .attr("class", row)
+            .attr("class","svg9")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg10 = d3.select(row).append("svg")
+            .attr("class", row)
+            .attr("class","svg10")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    female_indicator ="SE.PRM.CMPT.FE.ZS" ;
+    male_indicator ="SE.PRM.CMPT.MA.ZS";
+    getData2("education2", female_indicator, male_indicator);
 
 }
 var margin = {top: 40, right: 30, bottom: 30, left: 50},
@@ -297,15 +333,15 @@ function getIndex(d, time){
 
 var raw_data, nested_data; //global variable
 //get the json file
-
+var raw_data2, nested_data2;
 
 var datafilename,female_indicator,male_indicator;
 
 
-female_indicator ="SE.SCH.LIFE.FE";
+
 function getData(datafilenamen, female_indicator,male_indicator){
 
-d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
+d3.csv("data/"+datafilenamen+".csv", function(csv){
     //if(error) return console.warn(error);
    raw_data = csv;
     nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
@@ -328,7 +364,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg1.append("path")
 //            .update()
-      .datum(nested_data['XD']['SE.SCH.LIFE.FE'])
+      .datum(nested_data['XD'][female_indicator])
 //            .enter()
 
       .attr("class", "fe line")
@@ -336,7 +372,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg1.append("path")
 //            .update()
-      .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
+      .datum(nested_data['XD'][male_indicator])
 //            .enter()
 
       .attr("class", "ma line")
@@ -354,7 +390,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg2.append("path")
 //            .update()
-            .datum(nested_data['XT']['SE.SCH.LIFE.FE'])
+            .datum(nested_data['XT'][female_indicator])
 //            .enter()
 
             .attr("class", "fe line")
@@ -362,7 +398,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg2.append("path")
 //            .update()
-            .datum(nested_data['XT']['SE.SCH.LIFE.MA'])
+            .datum(nested_data['XT'][male_indicator])
 //            .enter()
 
             .attr("class", "ma line")
@@ -380,7 +416,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg3.append("path")
 //            .update()
-            .datum(nested_data['XP']['SE.SCH.LIFE.FE'])
+            .datum(nested_data['XP'][female_indicator])
 //            .enter()
 
             .attr("class", "fe line")
@@ -388,7 +424,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg3.append("path")
 //            .update()
-            .datum(nested_data['XP']['SE.SCH.LIFE.MA'])
+            .datum(nested_data['XP'][male_indicator])
 //            .enter()
 
             .attr("class", "ma line")
@@ -406,7 +442,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg4.append("path")
 //            .update()
-            .datum(nested_data['XN']['SE.SCH.LIFE.FE'])
+            .datum(nested_data['XN'][female_indicator])
 //            .enter()
 
             .attr("class", "fe line")
@@ -414,7 +450,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg4.append("path")
 //            .update()
-            .datum(nested_data['XN']['SE.SCH.LIFE.MA'])
+            .datum(nested_data['XN'][male_indicator])
 //            .enter()
 
             .attr("class", "ma line")
@@ -432,7 +468,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg5.append("path")
 //            .update()
-            .datum(nested_data['XM']['SE.SCH.LIFE.FE'])
+            .datum(nested_data['XM'][female_indicator])
 //            .enter()
 
             .attr("class", "fe line")
@@ -440,7 +476,7 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 
     svg5.append("path")
 //            .update()
-            .datum(nested_data['XM']['SE.SCH.LIFE.MA'])
+            .datum(nested_data['XM'][male_indicator])
 //            .enter()
 
             .attr("class", "ma line")
@@ -644,12 +680,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 //    function mousemove1() {
 //        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
 //                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XD']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XD']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma];
+//                indexfe = getIndex(nested_data['XD'][female_indicator],xm),
+//                dfe0 = nested_data['XD'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XD'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XD'][male_indicator],xm),
+//                dma0 = nested_data['XD'][male_indicator][indexma -1],
+//                dma1 = nested_data['XD'][male_indicator][indexma];
 //
 //        //see which year is closer
 //        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
@@ -665,12 +701,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 //    function mousemove2() {
 //        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
 //                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XT']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XT']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma];
+//                indexfe = getIndex(nested_data['XT'][female_indicator],xm),
+//                dfe0 = nested_data['XT'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XT'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XT'][male_indicator],xm),
+//                dma0 = nested_data['XT'][male_indicator][indexma -1],
+//                dma1 = nested_data['XT'][male_indicator][indexma];
 //
 //        //see which year is closer
 //        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
@@ -686,12 +722,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 //    function mousemove3() {
 //        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
 //                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XP']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XP']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma];
+//                indexfe = getIndex(nested_data['XP'][female_indicator],xm),
+//                dfe0 = nested_data['XP'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XP'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XP'][male_indicator],xm),
+//                dma0 = nested_data['XP'][male_indicator][indexma -1],
+//                dma1 = nested_data['XP'][male_indicator][indexma];
 //
 //        //see which year is closer
 //        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
@@ -707,12 +743,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 //    function mousemove4() {
 //        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
 //                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XN']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XN']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma];
+//                indexfe = getIndex(nested_data['XN'][female_indicator],xm),
+//                dfe0 = nested_data['XN'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XN'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XN'][male_indicator],xm),
+//                dma0 = nested_data['XN'][male_indicator][indexma -1],
+//                dma1 = nested_data['XN'][male_indicator][indexma];
 //
 //        //see which year is closer
 //        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
@@ -728,12 +764,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
 //    function mousemove5() {
 //        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
 //                xm = Math.floor(x0),
-//                indexfe = getIndex(nested_data['XM']['SE.SCH.LIFE.FE'],xm),
-//                dfe0 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe -1],
-//                dfe1 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe],
-//                indexma = getIndex(nested_data['XM']['SE.SCH.LIFE.MA'],xm),
-//                dma0 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma -1],
-//                dma1 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma];
+//                indexfe = getIndex(nested_data['XM'][female_indicator],xm),
+//                dfe0 = nested_data['XM'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XM'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XM'][male_indicator],xm),
+//                dma0 = nested_data['XM'][male_indicator][indexma -1],
+//                dma1 = nested_data['XM'][male_indicator][indexma];
 //
 //        //see which year is closer
 //        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
@@ -750,12 +786,12 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
     function mousemove1() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
                 xm = Math.floor(x0),
-                indexfe = getIndex(nested_data['XD']['SE.SCH.LIFE.FE'],xm),
-                dfe0 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe -1],
-                dfe1 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe],
-                indexma = getIndex(nested_data['XD']['SE.SCH.LIFE.MA'],xm),
-                dma0 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma -1],
-                dma1 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma];
+                indexfe = getIndex(nested_data['XD'][female_indicator],xm),
+                dfe0 = nested_data['XD'][female_indicator][indexfe -1],
+                dfe1 = nested_data['XD'][female_indicator][indexfe],
+                indexma = getIndex(nested_data['XD'][male_indicator],xm),
+                dma0 = nested_data['XD'][male_indicator][indexma -1],
+                dma1 = nested_data['XD'][male_indicator][indexma];
 
 
         var dfe;
@@ -776,46 +812,46 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
             indexma = indexma;
         }
 
-        focusma1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma1.attr("transform", "translate(" + x(nested_data['XD'][male_indicator][indexma].year) + "," + y(nested_data['XD'][male_indicator][indexma].value) + ")");
+        focusma1.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe1.attr("transform", "translate(" + x(nested_data['XD'][female_indicator][indexma].year) + "," + y(nested_data['XD'][female_indicator][indexma].value) + ")");
+        focusfe1.select("text").text(Number(nested_data['XD'][female_indicator][indexma].value).toFixed(2));
 
-        focusma2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma2.attr("transform", "translate(" + x(nested_data['XT'][male_indicator][indexma].year) + "," + y(nested_data['XT'][male_indicator][indexma].value) + ")");
+        focusma2.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe2.attr("transform", "translate(" + x(nested_data['XT'][female_indicator][indexma].year) + "," + y(nested_data['XT'][female_indicator][indexma].value) + ")");
+        focusfe2.select("text").text(Number(nested_data['XT'][female_indicator][indexma].value).toFixed(2));
 
-        focusma3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma3.attr("transform", "translate(" + x(nested_data['XP'][male_indicator][indexma].year) + "," + y(nested_data['XP'][male_indicator][indexma].value) + ")");
+        focusma3.select("text").text(Number(nested_data['XP'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe3.attr("transform", "translate(" + x(nested_data['XP'][female_indicator][indexma].year) + "," + y(nested_data['XP'][female_indicator][indexma].value) + ")");
+        focusfe3.select("text").text(Number(nested_data['XP'][female_indicator][indexma].value).toFixed(2));
 
-        focusma4.attr("transform", "translate(" + x(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma4.attr("transform", "translate(" + x(nested_data['XN'][male_indicator][indexma].year) + "," + y(nested_data['XN'][male_indicator][indexma].value) + ")");
+        focusma4.select("text").text(Number(nested_data['XN'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe4.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe4.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XN'][female_indicator][indexma].value) + ")");
+        focusfe4.select("text").text(Number(nested_data['XN'][female_indicator][indexma].value).toFixed(2));
 
-        focusma5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma5.attr("transform", "translate(" + x(nested_data['XM'][male_indicator][indexma].year) + "," + y(nested_data['XM'][male_indicator][indexma].value) + ")");
+        focusma5.select("text").text(Number(nested_data['XM'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe5.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XM'][female_indicator][indexma].value) + ")");
+        focusfe5.select("text").text(Number(nested_data['XM'][female_indicator][indexma].value).toFixed(2));
     }
 
     function mousemove2() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
                 xm = Math.floor(x0),
-                indexfe = getIndex(nested_data['XT']['SE.SCH.LIFE.FE'],xm),
-                dfe0 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe -1],
-                dfe1 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe],
-                indexma = getIndex(nested_data['XT']['SE.SCH.LIFE.MA'],xm),
-                dma0 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma -1],
-                dma1 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma];
+                indexfe = getIndex(nested_data['XT'][female_indicator],xm),
+                dfe0 = nested_data['XT'][female_indicator][indexfe -1],
+                dfe1 = nested_data['XT'][female_indicator][indexfe],
+                indexma = getIndex(nested_data['XT'][male_indicator],xm),
+                dma0 = nested_data['XT'][male_indicator][indexma -1],
+                dma1 = nested_data['XT'][male_indicator][indexma];
 
         var dma;
         if(x0 - dma0.year > dma1.year - x0){
@@ -826,46 +862,46 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
             indexma = indexma;
         }
 
-        focusma1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma1.attr("transform", "translate(" + x(nested_data['XD'][male_indicator][indexma].year) + "," + y(nested_data['XD'][male_indicator][indexma].value) + ")");
+        focusma1.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe1.attr("transform", "translate(" + x(nested_data['XD'][female_indicator][indexma].year) + "," + y(nested_data['XD'][female_indicator][indexma].value) + ")");
+        focusfe1.select("text").text(Number(nested_data['XD'][female_indicator][indexma].value).toFixed(2));
 
-        focusma2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma2.attr("transform", "translate(" + x(nested_data['XT'][male_indicator][indexma].year) + "," + y(nested_data['XT'][male_indicator][indexma].value) + ")");
+        focusma2.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe2.attr("transform", "translate(" + x(nested_data['XT'][female_indicator][indexma].year) + "," + y(nested_data['XT'][female_indicator][indexma].value) + ")");
+        focusfe2.select("text").text(Number(nested_data['XT'][female_indicator][indexma].value).toFixed(2));
 
-        focusma3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma3.attr("transform", "translate(" + x(nested_data['XP'][male_indicator][indexma].year) + "," + y(nested_data['XP'][male_indicator][indexma].value) + ")");
+        focusma3.select("text").text(Number(nested_data['XP'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe3.attr("transform", "translate(" + x(nested_data['XP'][female_indicator][indexma].year) + "," + y(nested_data['XP'][female_indicator][indexma].value) + ")");
+        focusfe3.select("text").text(Number(nested_data['XP'][female_indicator][indexma].value).toFixed(2));
 
-        focusma4.attr("transform", "translate(" + x(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma4.attr("transform", "translate(" + x(nested_data['XN'][male_indicator][indexma].year) + "," + y(nested_data['XN'][male_indicator][indexma].value) + ")");
+        focusma4.select("text").text(Number(nested_data['XN'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe4.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe4.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XN'][female_indicator][indexma].value) + ")");
+        focusfe4.select("text").text(Number(nested_data['XN'][female_indicator][indexma].value).toFixed(2));
 
-        focusma5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma5.attr("transform", "translate(" + x(nested_data['XM'][male_indicator][indexma].year) + "," + y(nested_data['XM'][male_indicator][indexma].value) + ")");
+        focusma5.select("text").text(Number(nested_data['XM'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe5.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XM'][female_indicator][indexma].value) + ")");
+        focusfe5.select("text").text(Number(nested_data['XM'][female_indicator][indexma].value).toFixed(2));
     }
 
     function mousemove3() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
                 xm = Math.floor(x0),
-                indexfe = getIndex(nested_data['XP']['SE.SCH.LIFE.FE'],xm),
-                dfe0 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe -1],
-                dfe1 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe],
-                indexma = getIndex(nested_data['XP']['SE.SCH.LIFE.MA'],xm),
-                dma0 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma -1],
-                dma1 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma];
+                indexfe = getIndex(nested_data['XP'][female_indicator],xm),
+                dfe0 = nested_data['XP'][female_indicator][indexfe -1],
+                dfe1 = nested_data['XP'][female_indicator][indexfe],
+                indexma = getIndex(nested_data['XP'][male_indicator],xm),
+                dma0 = nested_data['XP'][male_indicator][indexma -1],
+                dma1 = nested_data['XP'][male_indicator][indexma];
 
 
         var dma;
@@ -877,46 +913,46 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
             indexma = indexma;
         }
 
-        focusma1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma1.attr("transform", "translate(" + x(nested_data['XD'][male_indicator][indexma].year) + "," + y(nested_data['XD'][male_indicator][indexma].value) + ")");
+        focusma1.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe1.attr("transform", "translate(" + x(nested_data['XD'][female_indicator][indexma].year) + "," + y(nested_data['XD'][female_indicator][indexma].value) + ")");
+        focusfe1.select("text").text(Number(nested_data['XD'][female_indicator][indexma].value).toFixed(2));
 
-        focusma2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma2.attr("transform", "translate(" + x(nested_data['XT'][male_indicator][indexma].year) + "," + y(nested_data['XT'][male_indicator][indexma].value) + ")");
+        focusma2.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe2.attr("transform", "translate(" + x(nested_data['XT'][female_indicator][indexma].year) + "," + y(nested_data['XT'][female_indicator][indexma].value) + ")");
+        focusfe2.select("text").text(Number(nested_data['XT'][female_indicator][indexma].value).toFixed(2));
 
-        focusma3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma3.attr("transform", "translate(" + x(nested_data['XP'][male_indicator][indexma].year) + "," + y(nested_data['XP'][male_indicator][indexma].value) + ")");
+        focusma3.select("text").text(Number(nested_data['XP'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe3.attr("transform", "translate(" + x(nested_data['XP'][female_indicator][indexma].year) + "," + y(nested_data['XP'][female_indicator][indexma].value) + ")");
+        focusfe3.select("text").text(Number(nested_data['XP'][female_indicator][indexma].value).toFixed(2));
 
-        focusma4.attr("transform", "translate(" + x(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma4.attr("transform", "translate(" + x(nested_data['XN'][male_indicator][indexma].year) + "," + y(nested_data['XN'][male_indicator][indexma].value) + ")");
+        focusma4.select("text").text(Number(nested_data['XN'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe4.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe4.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XN'][female_indicator][indexma].value) + ")");
+        focusfe4.select("text").text(Number(nested_data['XN'][female_indicator][indexma].value).toFixed(2));
 
-        focusma5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma5.attr("transform", "translate(" + x(nested_data['XM'][male_indicator][indexma].year) + "," + y(nested_data['XM'][male_indicator][indexma].value) + ")");
+        focusma5.select("text").text(Number(nested_data['XM'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe5.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XM'][female_indicator][indexma].value) + ")");
+        focusfe5.select("text").text(Number(nested_data['XM'][female_indicator][indexma].value).toFixed(2));
     }
 
     function mousemove4() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
                 xm = Math.floor(x0),
-                indexfe = getIndex(nested_data['XN']['SE.SCH.LIFE.FE'],xm),
-                dfe0 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe -1],
-                dfe1 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe],
-                indexma = getIndex(nested_data['XN']['SE.SCH.LIFE.MA'],xm),
-                dma0 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma -1],
-                dma1 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma];
+                indexfe = getIndex(nested_data['XN'][female_indicator],xm),
+                dfe0 = nested_data['XN'][female_indicator][indexfe -1],
+                dfe1 = nested_data['XN'][female_indicator][indexfe],
+                indexma = getIndex(nested_data['XN'][male_indicator],xm),
+                dma0 = nested_data['XN'][male_indicator][indexma -1],
+                dma1 = nested_data['XN'][male_indicator][indexma];
 
 
         var dma;
@@ -928,46 +964,46 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
             indexma = indexma;
         }
 
-        focusma1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma1.attr("transform", "translate(" + x(nested_data['XD'][male_indicator][indexma].year) + "," + y(nested_data['XD'][male_indicator][indexma].value) + ")");
+        focusma1.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe1.attr("transform", "translate(" + x(nested_data['XD'][female_indicator][indexma].year) + "," + y(nested_data['XD'][female_indicator][indexma].value) + ")");
+        focusfe1.select("text").text(Number(nested_data['XD'][female_indicator][indexma].value).toFixed(2));
 
-        focusma2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma2.attr("transform", "translate(" + x(nested_data['XT'][male_indicator][indexma].year) + "," + y(nested_data['XT'][male_indicator][indexma].value) + ")");
+        focusma2.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe2.attr("transform", "translate(" + x(nested_data['XT'][female_indicator][indexma].year) + "," + y(nested_data['XT'][female_indicator][indexma].value) + ")");
+        focusfe2.select("text").text(Number(nested_data['XT'][female_indicator][indexma].value).toFixed(2));
 
-        focusma3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma3.attr("transform", "translate(" + x(nested_data['XP'][male_indicator][indexma].year) + "," + y(nested_data['XP'][male_indicator][indexma].value) + ")");
+        focusma3.select("text").text(Number(nested_data['XP'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.FE'][indexfe].value).toFixed(2));
+        focusfe3.attr("transform", "translate(" + x(nested_data['XP'][female_indicator][indexma].year) + "," + y(nested_data['XP'][female_indicator][indexma].value) + ")");
+        focusfe3.select("text").text(Number(nested_data['XP'][female_indicator][indexma].value).toFixed(2));
 
-        focusma4.attr("transform", "translate(" + x(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma4.attr("transform", "translate(" + x(nested_data['XN'][male_indicator][indexma].year) + "," + y(nested_data['XN'][male_indicator][indexma].value) + ")");
+        focusma4.select("text").text(Number(nested_data['XN'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe4.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe4.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XN'][female_indicator][indexma].value) + ")");
+        focusfe4.select("text").text(Number(nested_data['XN'][female_indicator][indexma].value).toFixed(2));
 
-        focusma5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma5.attr("transform", "translate(" + x(nested_data['XM'][male_indicator][indexma].year) + "," + y(nested_data['XM'][male_indicator][indexma].value) + ")");
+        focusma5.select("text").text(Number(nested_data['XM'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe5.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XM'][female_indicator][indexma].value) + ")");
+        focusfe5.select("text").text(Number(nested_data['XM'][female_indicator][indexma].value).toFixed(2));
     }
 
     function mousemove5() {
         var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
                 xm = Math.floor(x0),
-                indexfe = getIndex(nested_data['XM']['SE.SCH.LIFE.FE'],xm),
-                dfe0 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe -1],
-                dfe1 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe],
-                indexma = getIndex(nested_data['XM']['SE.SCH.LIFE.MA'],xm),
-                dma0 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma -1],
-                dma1 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma];
+                indexfe = getIndex(nested_data['XM'][female_indicator],xm),
+                dfe0 = nested_data['XM'][female_indicator][indexfe -1],
+                dfe1 = nested_data['XM'][female_indicator][indexfe],
+                indexma = getIndex(nested_data['XM'][male_indicator],xm),
+                dma0 = nested_data['XM'][male_indicator][indexma -1],
+                dma1 = nested_data['XM'][male_indicator][indexma];
 
 
         var dma;
@@ -979,35 +1015,36 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
             indexma = indexma;
         }
 
-        focusma1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma1.attr("transform", "translate(" + x(nested_data['XD'][male_indicator][indexma].year) + "," + y(nested_data['XD'][male_indicator][indexma].value) + ")");
+        focusma1.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe1.attr("transform", "translate(" + x(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe1.select("text").text(Number(nested_data['XD']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe1.attr("transform", "translate(" + x(nested_data['XD'][female_indicator][indexma].year) + "," + y(nested_data['XD'][female_indicator][indexma].value) + ")");
+        focusfe1.select("text").text(Number(nested_data['XD'][female_indicator][indexma].value).toFixed(2));
 
-        focusma2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma2.attr("transform", "translate(" + x(nested_data['XT'][male_indicator][indexma].year) + "," + y(nested_data['XT'][male_indicator][indexma].value) + ")");
+        focusma2.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe2.attr("transform", "translate(" + x(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe2.select("text").text(Number(nested_data['XT']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe2.attr("transform", "translate(" + x(nested_data['XT'][female_indicator][indexma].year) + "," + y(nested_data['XT'][female_indicator][indexma].value) + ")");
+        focusfe2.select("text").text(Number(nested_data['XT'][female_indicator][indexma].value).toFixed(2));
 
-        focusma3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma3.attr("transform", "translate(" + x(nested_data['XP'][male_indicator][indexma].year) + "," + y(nested_data['XP'][male_indicator][indexma].value) + ")");
+        focusma3.select("text").text(Number(nested_data['XP'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe3.attr("transform", "translate(" + x(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe3.select("text").text(Number(nested_data['XP']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe3.attr("transform", "translate(" + x(nested_data['XP'][female_indicator][indexma].year) + "," + y(nested_data['XP'][female_indicator][indexma].value) + ")");
+        focusfe3.select("text").text(Number(nested_data['XP'][female_indicator][indexma].value).toFixed(2));
 
-        focusma4.attr("transform", "translate(" + x(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma4.attr("transform", "translate(" + x(nested_data['XN'][male_indicator][indexma].year) + "," + y(nested_data['XN'][male_indicator][indexma].value) + ")");
+        focusma4.select("text").text(Number(nested_data['XN'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe4.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XN']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe4.select("text").text(Number(nested_data['XN']['SE.SCH.LIFE.FE'][indexfe].value).toFixed(2));
+        focusfe4.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XN'][female_indicator][indexma].value) + ")");
+        focusfe4.select("text").text(Number(nested_data['XN'][female_indicator][indexma].value).toFixed(2));
 
-        focusma5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value) + ")");
-        focusma5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.MA'][indexma].value).toFixed(2));
+        focusma5.attr("transform", "translate(" + x(nested_data['XM'][male_indicator][indexma].year) + "," + y(nested_data['XM'][male_indicator][indexma].value) + ")");
+        focusma5.select("text").text(Number(nested_data['XM'][male_indicator][indexma].value).toFixed(2));
 
-        focusfe5.attr("transform", "translate(" + x(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].year) + "," + y(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value) + ")");
-        focusfe5.select("text").text(Number(nested_data['XM']['SE.SCH.LIFE.FE'][indexma].value).toFixed(2));
+        focusfe5.attr("transform", "translate(" + x(nested_data['XM'][female_indicator][indexma].year) + "," + y(nested_data['XM'][female_indicator][indexma].value) + ")");
+        focusfe5.select("text").text(Number(nested_data['XM'][female_indicator][indexma].value).toFixed(2));
+        console.log(indexma);
     }
 
     $('rect').hover(
@@ -1017,19 +1054,743 @@ d3.csv("/a3-rickixie-taoaoao/data/"+datafilenamen+".csv", function(csv){
                 $('.focusma, .focusfe').css({'display':'none'});
             });
 });
-
-
 }
+function getData2(datafilenamen, female_indicator,male_indicator){
+
+    d3.csv("data/"+datafilenamen+".csv", function(csv){
+        //if(error) return console.warn(error);
+      raw_data2 = csv;
+        nested_data2 =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
+                .key(function(d) { return d.country_id; })
+                .key(function(d) { return d.indicator_id; })
+                .map(raw_data2);
+
+        x.domain([2004,2013]);
+        y.domain( [0,105]);
+
+        //svg1
+        svg6.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg6.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+        svg6.append("path")
+                //            .update()
+                .datum(nested_data2['XD'][female_indicator])
+                //            .enter()
+
+                .attr("class", "fe line")
+                .attr("d", line);
+
+        svg6.append("path")
+                //            .update()
+                .datum(nested_data2['XD'][male_indicator])
+                //            .enter()
+
+                .attr("class", "ma line")
+                .attr("d", line);
+
+        //svg2
+        svg7.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg7.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+        svg7.append("path")
+                //            .update()
+                .datum(nested_data2['XT'][female_indicator])
+                //            .enter()
+
+                .attr("class", "fe line")
+                .attr("d", line);
+
+        svg7.append("path")
+                //            .update()
+                .datum(nested_data2['XT'][male_indicator])
+                //            .enter()
+
+                .attr("class", "ma line")
+                .attr("d", line);
+
+        //svg3
+        svg8.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg8.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+        svg8.append("path")
+                //            .update()
+                .datum(nested_data2['XP'][female_indicator])
+                //            .enter()
+
+                .attr("class", "fe line")
+                .attr("d", line);
+
+        svg8.append("path")
+                //            .update()
+                .datum(nested_data2['XP'][male_indicator])
+                //            .enter()
+
+                .attr("class", "ma line")
+                .attr("d", line);
+
+        //svg4
+        svg9.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg9.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+        svg9.append("path")
+                //            .update()
+                .datum(nested_data2['XN'][female_indicator])
+                //            .enter()
+
+                .attr("class", "fe line")
+                .attr("d", line);
+
+        svg9.append("path")
+                //            .update()
+                .datum(nested_data2['XN'][male_indicator])
+                //            .enter()
+
+                .attr("class", "ma line")
+                .attr("d", line);
+
+        //svg5
+        svg10.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+        svg10.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+        svg10.append("path")
+                //            .update()
+                .datum(nested_data2['XM'][female_indicator])
+                //            .enter()
+
+                .attr("class", "fe line")
+                .attr("d", line);
+
+        svg10.append("path")
+                //            .update()
+                .datum(nested_data2['XM'][male_indicator])
+                //            .enter()
+
+                .attr("class", "ma line")
+                .attr("d", line);
+
+        //svg1 interaction
+        var focusfe6 = svg6.append("g")
+                .attr("class", "focusfe")
+                .style("display", "none");
+
+        focusfe6.append("circle")
+                .attr("r", 3);
+
+        focusfe6.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //circle mark for male lines
+        var focusma6 = svg6.append("g")
+                .attr("class", "focusma")
+                .style("display", "none");
+
+        focusma6.append("circle")
+                .attr("r", 3);
+
+        focusma6.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //add an overlap rect to sense mouseover
+        svg6.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                //        .on("mouseover", function() {
+                //            focusfe1.style("display", null);
+                //            focusma1.style("display", null);
+                //        })
+                //        .on("mouseout", function() {
+                //            focusfe1.style("display", "none");
+                //            focusma1.style("display", "none");
+                //        })
+                .on("mousemove", mousemove6);
+
+        //svg2 interaction
+        var focusfe7 = svg7.append("g")
+                .attr("class", "focusfe")
+                .style("display", "none");
+
+        focusfe7.append("circle")
+                .attr("r", 3);
+
+        focusfe7.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //circle mark for male lines
+        var focusma7 = svg7.append("g")
+                .attr("class", "focusma")
+                .style("display", "none");
+
+        focusma7.append("circle")
+                .attr("r", 3);
+
+        focusma7.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //add an overlap rect to sense mouseover
+        svg7.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                //            .on("mouseover", function() {
+                //                focusfe2.style("display", null);
+                //                focusma2.style("display", null);
+                //            })
+                //            .on("mouseout", function() {
+                //                focusfe2.style("display", "none");
+                //                focusma2.style("display", "none");
+                //            })
+                .on("mousemove", mousemove7);
+
+        //svg3 interaction
+        var focusfe8 = svg8.append("g")
+                .attr("class", "focusfe")
+                .style("display", "none");
+
+        focusfe8.append("circle")
+                .attr("r", 3);
+
+        focusfe8.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //circle mark for male lines
+        var focusma8 = svg8.append("g")
+                .attr("class", "focusma")
+                .style("display", "none");
+
+        focusma8.append("circle")
+                .attr("r", 3);
+
+        focusma8.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //add an overlap rect to sense mouseover
+        svg8.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                //            .on("mouseover", function() {
+                //                focusfe3.style("display", null);
+                //                focusma3.style("display", null);
+                //            })
+                //            .on("mouseout", function() {
+                //                focusfe3.style("display", "none");
+                //                focusma3.style("display", "none");
+                //            })
+                .on("mousemove", mousemove8);
+
+        //svg4 interaction
+        var focusfe9 = svg9.append("g")
+                .attr("class", "focusfe")
+                .style("display", "none");
+
+        focusfe9.append("circle")
+                .attr("r", 3);
+
+        focusfe9.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //circle mark for male lines
+        var focusma9 = svg9.append("g")
+                .attr("class", "focusma")
+                .style("display", "none");
+
+        focusma9.append("circle")
+                .attr("r", 3);
+
+        focusma9.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //add an overlap rect to sense mouseover
+        svg9.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                //            .on("mouseover", function() {
+                //                focusfe4.style("display", null);
+                //                focusma4.style("display", null);
+                //            })
+                //            .on("mouseout", function() {
+                //                focusfe4.style("display", "none");
+                //                focusma4.style("display", "none");
+                //            })
+                .on("mousemove", mousemove9);
+
+        //svg5 interaction
+        var focusfe10 = svg10.append("g")
+                .attr("class", "focusfe")
+                .style("display", "none");
+
+        focusfe10.append("circle")
+                .attr("r", 3);
+
+        focusfe10.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //circle mark for male lines
+        var focusma10 = svg10.append("g")
+                .attr("class", "focusma")
+                .style("display", "none");
+
+        focusma10.append("circle")
+                .attr("r", 3);
+
+        focusma10.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em");
+
+        //add an overlap rect to sense mouseover
+        svg10.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                //            .on("mouseover", function() {
+                //                focusfe5.style("display", null);
+                //                focusma5.style("display", null);
+                //            })
+                //            .on("mouseout", function() {
+                //                focusfe5.style("display", "none");
+                //                focusma5.style("display", "none");
+                //            })
+                .on("mousemove", mousemove10);
+
+//    function mousemove1() {
+//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+//                xm = Math.floor(x0),
+//                indexfe = getIndex(nested_data['XD'][female_indicator],xm),
+//                dfe0 = nested_data['XD'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XD'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XD'][male_indicator],xm),
+//                dma0 = nested_data['XD'][male_indicator][indexma -1],
+//                dma1 = nested_data['XD'][male_indicator][indexma];
+//
+//        //see which year is closer
+//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+//
+//        focusma1.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+//        focusma1.select("text").text(Number(dma.value).toFixed(2));
+//
+//        focusfe1.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+//        focusfe1.select("text").text(Number(dfe.value).toFixed(2));
+//    }
+//
+//    function mousemove2() {
+//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+//                xm = Math.floor(x0),
+//                indexfe = getIndex(nested_data['XT'][female_indicator],xm),
+//                dfe0 = nested_data['XT'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XT'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XT'][male_indicator],xm),
+//                dma0 = nested_data['XT'][male_indicator][indexma -1],
+//                dma1 = nested_data['XT'][male_indicator][indexma];
+//
+//        //see which year is closer
+//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+//
+//        focusma2.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+//        focusma2.select("text").text(Number(dma.value).toFixed(2));
+//
+//        focusfe2.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+//        focusfe2.select("text").text(Number(dfe.value).toFixed(2));
+//    }
+//
+//    function mousemove3() {
+//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+//                xm = Math.floor(x0),
+//                indexfe = getIndex(nested_data['XP'][female_indicator],xm),
+//                dfe0 = nested_data['XP'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XP'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XP'][male_indicator],xm),
+//                dma0 = nested_data['XP'][male_indicator][indexma -1],
+//                dma1 = nested_data['XP'][male_indicator][indexma];
+//
+//        //see which year is closer
+//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+//
+//        focusma3.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+//        focusma3.select("text").text(Number(dma.value).toFixed(2));
+//
+//        focusfe3.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+//        focusfe3.select("text").text(Number(dfe.value).toFixed(2));
+//    }
+//
+//    function mousemove4() {
+//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+//                xm = Math.floor(x0),
+//                indexfe = getIndex(nested_data['XN'][female_indicator],xm),
+//                dfe0 = nested_data['XN'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XN'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XN'][male_indicator],xm),
+//                dma0 = nested_data['XN'][male_indicator][indexma -1],
+//                dma1 = nested_data['XN'][male_indicator][indexma];
+//
+//        //see which year is closer
+//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+//
+//        focusma4.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+//        focusma4.select("text").text(Number(dma.value).toFixed(2));
+//
+//        focusfe4.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+//        focusfe4.select("text").text(Number(dfe.value).toFixed(2));
+//    }
+//
+//    function mousemove5() {
+//        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+//                xm = Math.floor(x0),
+//                indexfe = getIndex(nested_data['XM'][female_indicator],xm),
+//                dfe0 = nested_data['XM'][female_indicator][indexfe -1],
+//                dfe1 = nested_data['XM'][female_indicator][indexfe],
+//                indexma = getIndex(nested_data['XM'][male_indicator],xm),
+//                dma0 = nested_data['XM'][male_indicator][indexma -1],
+//                dma1 = nested_data['XM'][male_indicator][indexma];
+//
+//        //see which year is closer
+//        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+//        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+//
+//        focusma5.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+//        focusma5.select("text").text(Number(dma.value).toFixed(2));
+//
+//        focusfe5.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+//        focusfe5.select("text").text(Number(dfe.value).toFixed(2));
+//    }
+//    console.log(nested_data);
+
+        function mousemove6() {
+            var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                    xm = Math.floor(x0),
+                    indexfe = getIndex(nested_data2['XD'][female_indicator],xm),
+                    dfe0 = nested_data2['XD'][female_indicator][indexfe -1],
+                    dfe1 = nested_data2['XD'][female_indicator][indexfe],
+                    indexma = getIndex(nested_data2['XD'][male_indicator],xm),
+                    dma0 = nested_data2['XD'][male_indicator][indexma -1],
+                    dma1 = nested_data2['XD'][male_indicator][indexma];
+
+
+            var dfe;
+            if(x0 - dfe0.year > dfe1.year - x0){
+                dfe = dfe0;
+                indexfe = indexfe -1;
+            } else if (x0 - dfe0.year <= dfe1.year - x0){
+                dfe = dfe1;
+                indexfe = indexfe;
+            }
+
+            var dma;
+            if(x0 - dma0.year > dma1.year - x0){
+                dma = dma0;
+                indexma = indexma -1;
+            } else if (x0 - dma0.year <= dma1.year - x0){
+                dma = dma1;
+                indexma = indexma;
+            }
+
+            focusma6.attr("transform", "translate(" + x(nested_data2['XD'][male_indicator][indexma].year) + "," + y(nested_data2['XD'][male_indicator][indexma].value) + ")");
+            focusma6.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe6.attr("transform", "translate(" + x(nested_data2['XD'][female_indicator][indexma].year) + "," + y(nested_data2['XD'][female_indicator][indexma].value) + ")");
+            focusfe6.select("text").text(Number(nested_data2['XD'][female_indicator][indexma].value).toFixed(2));
+
+            focusma7.attr("transform", "translate(" + x(nested_data2['XT'][male_indicator][indexma].year) + "," + y(nested_data2['XT'][male_indicator][indexma].value) + ")");
+            focusma7.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe7.attr("transform", "translate(" + x(nested_data2['XT'][female_indicator][indexma].year) + "," + y(nested_data2['XT'][female_indicator][indexma].value) + ")");
+            focusfe7.select("text").text(Number(nested_data2['XT'][female_indicator][indexma].value).toFixed(2));
+
+            focusma8.attr("transform", "translate(" + x(nested_data2['XP'][male_indicator][indexma].year) + "," + y(nested_data2['XP'][male_indicator][indexma].value) + ")");
+            focusma8.select("text").text(Number(nested_data2['XP'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe8.attr("transform", "translate(" + x(nested_data2['XP'][female_indicator][indexma].year) + "," + y(nested_data2['XP'][female_indicator][indexma].value) + ")");
+            focusfe8.select("text").text(Number(nested_data2['XP'][female_indicator][indexma].value).toFixed(2));
+
+            focusma9.attr("transform", "translate(" + x(nested_data2['XN'][male_indicator][indexma].year) + "," + y(nested_data2['XN'][male_indicator][indexma].value) + ")");
+            focusma9.select("text").text(Number(nested_data2['XN'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe9.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XN'][female_indicator][indexma].value) + ")");
+            focusfe9.select("text").text(Number(nested_data2['XN'][female_indicator][indexma].value).toFixed(2));
+
+            focusma10.attr("transform", "translate(" + x(nested_data2['XM'][male_indicator][indexma].year) + "," + y(nested_data2['XM'][male_indicator][indexma].value) + ")");
+            focusma10.select("text").text(Number(nested_data2['XM'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe10.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XM'][female_indicator][indexma].value) + ")");
+            focusfe10.select("text").text(Number(nested_data2['XM'][female_indicator][indexma].value).toFixed(2));
+
+        }
+
+        function mousemove7() {
+            var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                    xm = Math.floor(x0),
+                    indexfe = getIndex(nested_data2['XT'][female_indicator],xm),
+                    dfe0 = nested_data2['XT'][female_indicator][indexfe -1],
+                    dfe1 = nested_data2['XT'][female_indicator][indexfe],
+                    indexma = getIndex(nested_data2['XT'][male_indicator],xm),
+                    dma0 = nested_data2['XT'][male_indicator][indexma -1],
+                    dma1 = nested_data2['XT'][male_indicator][indexma];
+
+            var dma;
+            if(x0 - dma0.year > dma1.year - x0){
+                dma = dma0;
+                indexma = indexma -1;
+            } else if (x0 - dma0.year <= dma1.year - x0){
+                dma = dma1;
+                indexma = indexma;
+            }
+
+            focusma6.attr("transform", "translate(" + x(nested_data2['XD'][male_indicator][indexma].year) + "," + y(nested_data2['XD'][male_indicator][indexma].value) + ")");
+            focusma6.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe6.attr("transform", "translate(" + x(nested_data2['XD'][female_indicator][indexma].year) + "," + y(nested_data2['XD'][female_indicator][indexma].value) + ")");
+            focusfe6.select("text").text(Number(nested_data2['XD'][female_indicator][indexma].value).toFixed(2));
+
+            focusma7.attr("transform", "translate(" + x(nested_data2['XT'][male_indicator][indexma].year) + "," + y(nested_data2['XT'][male_indicator][indexma].value) + ")");
+            focusma7.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe7.attr("transform", "translate(" + x(nested_data2['XT'][female_indicator][indexma].year) + "," + y(nested_data2['XT'][female_indicator][indexma].value) + ")");
+            focusfe7.select("text").text(Number(nested_data2['XT'][female_indicator][indexma].value).toFixed(2));
+
+            focusma8.attr("transform", "translate(" + x(nested_data2['XP'][male_indicator][indexma].year) + "," + y(nested_data2['XP'][male_indicator][indexma].value) + ")");
+            focusma8.select("text").text(Number(nested_data2['XP'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe8.attr("transform", "translate(" + x(nested_data2['XP'][female_indicator][indexma].year) + "," + y(nested_data2['XP'][female_indicator][indexma].value) + ")");
+            focusfe8.select("text").text(Number(nested_data2['XP'][female_indicator][indexma].value).toFixed(2));
+
+            focusma9.attr("transform", "translate(" + x(nested_data2['XN'][male_indicator][indexma].year) + "," + y(nested_data2['XN'][male_indicator][indexma].value) + ")");
+            focusma9.select("text").text(Number(nested_data2['XN'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe9.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XN'][female_indicator][indexma].value) + ")");
+            focusfe9.select("text").text(Number(nested_data2['XN'][female_indicator][indexma].value).toFixed(2));
+
+            focusma10.attr("transform", "translate(" + x(nested_data2['XM'][male_indicator][indexma].year) + "," + y(nested_data2['XM'][male_indicator][indexma].value) + ")");
+            focusma10.select("text").text(Number(nested_data2['XM'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe10.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XM'][female_indicator][indexma].value) + ")");
+            focusfe10.select("text").text(Number(nested_data2['XM'][female_indicator][indexma].value).toFixed(2));
+
+        }
+
+        function mousemove8() {
+            var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                    xm = Math.floor(x0),
+                    indexfe = getIndex(nested_data2['XP'][female_indicator],xm),
+                    dfe0 = nested_data2['XP'][female_indicator][indexfe -1],
+                    dfe1 = nested_data2['XP'][female_indicator][indexfe],
+                    indexma = getIndex(nested_data2['XP'][male_indicator],xm),
+                    dma0 = nested_data2['XP'][male_indicator][indexma -1],
+                    dma1 = nested_data2['XP'][male_indicator][indexma];
+
+
+            var dma;
+            if(x0 - dma0.year > dma1.year - x0){
+                dma = dma0;
+                indexma = indexma -1;
+            } else if (x0 - dma0.year <= dma1.year - x0){
+                dma = dma1;
+                indexma = indexma;
+            }
+
+
+            focusma6.attr("transform", "translate(" + x(nested_data2['XD'][male_indicator][indexma].year) + "," + y(nested_data2['XD'][male_indicator][indexma].value) + ")");
+            focusma6.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe6.attr("transform", "translate(" + x(nested_data2['XD'][female_indicator][indexma].year) + "," + y(nested_data2['XD'][female_indicator][indexma].value) + ")");
+            focusfe6.select("text").text(Number(nested_data2['XD'][female_indicator][indexma].value).toFixed(2));
+
+            focusma7.attr("transform", "translate(" + x(nested_data2['XT'][male_indicator][indexma].year) + "," + y(nested_data2['XT'][male_indicator][indexma].value) + ")");
+            focusma7.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe7.attr("transform", "translate(" + x(nested_data2['XT'][female_indicator][indexma].year) + "," + y(nested_data2['XT'][female_indicator][indexma].value) + ")");
+            focusfe7.select("text").text(Number(nested_data2['XT'][female_indicator][indexma].value).toFixed(2));
+
+            focusma8.attr("transform", "translate(" + x(nested_data2['XP'][male_indicator][indexma].year) + "," + y(nested_data2['XP'][male_indicator][indexma].value) + ")");
+            focusma8.select("text").text(Number(nested_data2['XP'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe8.attr("transform", "translate(" + x(nested_data2['XP'][female_indicator][indexma].year) + "," + y(nested_data2['XP'][female_indicator][indexma].value) + ")");
+            focusfe8.select("text").text(Number(nested_data2['XP'][female_indicator][indexma].value).toFixed(2));
+
+            focusma9.attr("transform", "translate(" + x(nested_data2['XN'][male_indicator][indexma].year) + "," + y(nested_data2['XN'][male_indicator][indexma].value) + ")");
+            focusma9.select("text").text(Number(nested_data2['XN'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe9.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XN'][female_indicator][indexma].value) + ")");
+            focusfe9.select("text").text(Number(nested_data2['XN'][female_indicator][indexma].value).toFixed(2));
+
+            focusma10.attr("transform", "translate(" + x(nested_data2['XM'][male_indicator][indexma].year) + "," + y(nested_data2['XM'][male_indicator][indexma].value) + ")");
+            focusma10.select("text").text(Number(nested_data2['XM'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe10.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XM'][female_indicator][indexma].value) + ")");
+            focusfe10.select("text").text(Number(nested_data2['XM'][female_indicator][indexma].value).toFixed(2));
+
+        }
+
+        function mousemove9() {
+            var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                    xm = Math.floor(x0),
+                    indexfe = getIndex(nested_data2['XN'][female_indicator],xm),
+                    dfe0 = nested_data2['XN'][female_indicator][indexfe -1],
+                    dfe1 = nested_data2['XN'][female_indicator][indexfe],
+                    indexma = getIndex(nested_data2['XN'][male_indicator],xm),
+                    dma0 = nested_data2['XN'][male_indicator][indexma -1],
+                    dma1 = nested_data2['XN'][male_indicator][indexma];
+
+
+            var dma;
+            if(x0 - dma0.year > dma1.year - x0){
+                dma = dma0;
+                indexma = indexma -1;
+            } else if (x0 - dma0.year <= dma1.year - x0){
+                dma = dma1;
+                indexma = indexma;
+            }
+
+            focusma6.attr("transform", "translate(" + x(nested_data2['XD'][male_indicator][indexma].year) + "," + y(nested_data2['XD'][male_indicator][indexma].value) + ")");
+            focusma6.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe6.attr("transform", "translate(" + x(nested_data2['XD'][female_indicator][indexma].year) + "," + y(nested_data2['XD'][female_indicator][indexma].value) + ")");
+            focusfe6.select("text").text(Number(nested_data2['XD'][female_indicator][indexma].value).toFixed(2));
+
+            focusma7.attr("transform", "translate(" + x(nested_data2['XT'][male_indicator][indexma].year) + "," + y(nested_data2['XT'][male_indicator][indexma].value) + ")");
+            focusma7.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe7.attr("transform", "translate(" + x(nested_data2['XT'][female_indicator][indexma].year) + "," + y(nested_data2['XT'][female_indicator][indexma].value) + ")");
+            focusfe7.select("text").text(Number(nested_data2['XT'][female_indicator][indexma].value).toFixed(2));
+
+            focusma8.attr("transform", "translate(" + x(nested_data2['XP'][male_indicator][indexma].year) + "," + y(nested_data2['XP'][male_indicator][indexma].value) + ")");
+            focusma8.select("text").text(Number(nested_data2['XP'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe8.attr("transform", "translate(" + x(nested_data2['XP'][female_indicator][indexma].year) + "," + y(nested_data2['XP'][female_indicator][indexma].value) + ")");
+            focusfe8.select("text").text(Number(nested_data2['XP'][female_indicator][indexma].value).toFixed(2));
+
+            focusma9.attr("transform", "translate(" + x(nested_data2['XN'][male_indicator][indexma].year) + "," + y(nested_data2['XN'][male_indicator][indexma].value) + ")");
+            focusma9.select("text").text(Number(nested_data2['XN'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe9.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XN'][female_indicator][indexma].value) + ")");
+            focusfe9.select("text").text(Number(nested_data2['XN'][female_indicator][indexma].value).toFixed(2));
+
+            focusma10.attr("transform", "translate(" + x(nested_data2['XM'][male_indicator][indexma].year) + "," + y(nested_data2['XM'][male_indicator][indexma].value) + ")");
+            focusma10.select("text").text(Number(nested_data2['XM'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe10.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XM'][female_indicator][indexma].value) + ")");
+            focusfe10.select("text").text(Number(nested_data2['XM'][female_indicator][indexma].value).toFixed(2));
+
+        }
+
+        function mousemove10() {
+            var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                    xm = Math.floor(x0),
+                    indexfe = getIndex(nested_data2['XM'][female_indicator],xm),
+                    dfe0 = nested_data2['XM'][female_indicator][indexfe -1],
+                    dfe1 = nested_data2['XM'][female_indicator][indexfe],
+                    indexma = getIndex(nested_data2['XM'][male_indicator],xm),
+                    dma0 = nested_data2['XM'][male_indicator][indexma -1],
+                    dma1 = nested_data2['XM'][male_indicator][indexma];
+
+
+            var dma;
+            if(x0 - dma0.year > dma1.year - x0){
+                dma = dma0;
+                indexma = indexma -1;
+            } else if (x0 - dma0.year <= dma1.year - x0){
+                dma = dma1;
+                indexma = indexma;
+            }
+
+
+            focusma6.attr("transform", "translate(" + x(nested_data2['XD'][male_indicator][indexma].year) + "," + y(nested_data2['XD'][male_indicator][indexma].value) + ")");
+            focusma6.select("text").text(Number(nested_data['XD'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe6.attr("transform", "translate(" + x(nested_data2['XD'][female_indicator][indexma].year) + "," + y(nested_data2['XD'][female_indicator][indexma].value) + ")");
+            focusfe6.select("text").text(Number(nested_data2['XD'][female_indicator][indexma].value).toFixed(2));
+
+            focusma7.attr("transform", "translate(" + x(nested_data2['XT'][male_indicator][indexma].year) + "," + y(nested_data2['XT'][male_indicator][indexma].value) + ")");
+            focusma7.select("text").text(Number(nested_data['XT'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe7.attr("transform", "translate(" + x(nested_data2['XT'][female_indicator][indexma].year) + "," + y(nested_data2['XT'][female_indicator][indexma].value) + ")");
+            focusfe7.select("text").text(Number(nested_data2['XT'][female_indicator][indexma].value).toFixed(2));
+
+            focusma8.attr("transform", "translate(" + x(nested_data2['XP'][male_indicator][indexma].year) + "," + y(nested_data2['XP'][male_indicator][indexma].value) + ")");
+            focusma8.select("text").text(Number(nested_data2['XP'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe8.attr("transform", "translate(" + x(nested_data2['XP'][female_indicator][indexma].year) + "," + y(nested_data2['XP'][female_indicator][indexma].value) + ")");
+            focusfe8.select("text").text(Number(nested_data2['XP'][female_indicator][indexma].value).toFixed(2));
+
+            focusma9.attr("transform", "translate(" + x(nested_data2['XN'][male_indicator][indexma].year) + "," + y(nested_data2['XN'][male_indicator][indexma].value) + ")");
+            focusma9.select("text").text(Number(nested_data2['XN'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe9.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XN'][female_indicator][indexma].value) + ")");
+            focusfe9.select("text").text(Number(nested_data2['XN'][female_indicator][indexma].value).toFixed(2));
+
+            focusma10.attr("transform", "translate(" + x(nested_data2['XM'][male_indicator][indexma].year) + "," + y(nested_data2['XM'][male_indicator][indexma].value) + ")");
+            focusma10.select("text").text(Number(nested_data2['XM'][male_indicator][indexma].value).toFixed(2));
+
+            focusfe10.attr("transform", "translate(" + x(nested_data2['XM'][female_indicator][indexma].year) + "," + y(nested_data2['XM'][female_indicator][indexma].value) + ")");
+            focusfe10.select("text").text(Number(nested_data2['XM'][female_indicator][indexma].value).toFixed(2));
+
+            console.log(indexma);
+        }
+
+
+
+        $('rect').hover(
+                function() {
+                    $('.focusma, .focusfe').css({'display':'inline'});
+                }, function(){
+                    $('.focusma, .focusfe').css({'display':'none'});
+                });
+    });
+}
+
+
+
+
+
 //rown = "row1";
-    drawRow(".row1");
-//    drawRow(".row2");
 
 
-//    getData("education1");
 
-//rown = "row2";
-//    drawRow(".row1", svg6, svg7, svg8, svg9, svg10);
+//    drawRow2(".row2");
+drawRow(".row1");
 
-//    getData("education1");
 
 </script>
