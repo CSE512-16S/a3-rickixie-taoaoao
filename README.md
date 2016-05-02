@@ -39,12 +39,12 @@ We also prototyped our design with Tableau as shown below.
 
 ![storyboard4](storyboard/storyboard4.png)
 
-### Changes between Storyboard and the Final Implementation
+## Changes between Storyboard and the Final Implementation
 
-####Design Decision
+###Design Decision
 We utilized both the [ColorBrewer](http://colorbrewer2.org/) and Tableau's color palette to choose our color encoding of the gender data, we used the NoCoffee visual simulator to double check our color palletee. We also paired a san-serif font serif font to balance our design.
 
-####Technical implementation and changes
+###Technical implementation and changes
 1. Data structure: in order to create the grid structure in our visualization, we needed to transform our data accordingly. We were initially trying to created our own structure but then realized the nest() feature that d3 provided.
 2. Drawing the grid: we were trying to use loops and d3 to automatically draw our multiples based on the indicators and the income level but weren't able to do so. In the end, we decided to hard code the position of each multiples in order to get some working prototypes.
 3. Hover interaction: we were intially tried to have all small multiples linked with each other as the audiences hover over the graph, but there are some issues to link across rows.
