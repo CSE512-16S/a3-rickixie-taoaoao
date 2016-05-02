@@ -16,22 +16,13 @@ In this interactive visualization, we wanted to explore the relationship between
 
 We used small multiples to show the change in data while allow direct comparison across different income levels. As seen in the visualization, indicators are presented in rows, while the columns are aggregated with the income levels of all countries. Additionally, both male and female value were plot in the same multiples to represent the disparity. To see the value of different gender difference indicators You can hover over the each graph to view the actual value of each year. 
 
-(Put your a brief description of your final interactive visualization application and your dataset here.)
-
 
 ## Running Instructions
 
-Put your running instructions here. (Tell us how to run your visualization.)
+Access our visualization at http://cse512-16s.github.io/a3-rickixie-taoaoao/ or download this repository and run `python -m SimpleHTTPServer 9000` and access this from http://localhost:9000/.
 
-If your visualization is web-based,  it would be great if your submission can be opened online. [Github Pages](http://pages.github.com/) is a good and easy way to put your visualization online so you can put your link here.  For example:
-
-Access our visualization at http://cse512-16s.github.io/a3-jheer-mcorrell-jhoffs/ or download this repository and run `python -m SimpleHTTPServer 9000` and access this from http://localhost:9000/.
-
-If you put your work online, please also write a [one-line description and add a link to your final work](http://note.io/1n3u46s) so people can access it directly from the CSE512-16S page.
 
 ## Story Board
-
-Put either your storyboard content or a [link to your storyboard pdf file](storyboard.pdf?raw=true) here. Just like A2, you can use any software to create a *reasonable* pdf storyboard.
 
 Since there are multiple dimensions in the gender statistics, we thought small multiples will be an ideal representation of our dataset. To allow comparison, we also wanted to have a tooltip that show the value of a indicator across all different levels while the audiences hover over a particular year.
 
@@ -53,7 +44,10 @@ We also prototyped our design with Tableau as shown below.
 A paragraph explaining changes between the storyboard and the final implementation.
 ####Design Decision
 We utilized the [ColorBrewer](http://colorbrewer2.org/) tool to choose our color encoding of the gender data.
-
+####Technical implementation and changes
+1. Data structure: in order to create the grid structure in our visualization, we needed to transform our data accordingly. We were initially trying to created our own structure but then realized the nest() feature that d3 provided.
+2. Drawing the grid: we were trying to use loops and d3 to automatically draw our multiples based on the indicators and the income level but weren't able to do so. In the end, we decided to hard code the position of each multiples in order to get some working prototypes.
+3. Hover interaction: we were intially tried to have all small multiples linked with each other as the audiences hover over the graph, but there are some issues to link across rows.
 
 ## Development Process
 
@@ -64,9 +58,9 @@ Include:
 
 - A commentary on the development process, including answers to the following questions:
   - Roughly how much time did you spend developing your application?
-    - Research and finalized the data sets: The whole week…
+    - Research and finalized the data sets: 2 days
     - Processed and retrieving the data from world bank: 1 day (included learning python)
-    - Building the data visulization: ???? days..
+    - Building the data visulization: 3 days+..
   - What aspects took the most time?
     - Both of us had no prior experience with d3.js and limited experience with javascript, so learning about d3 with the formatted the data took is the most time. We may also scale up the challenges than what we can do in the time that allowed. 
 
