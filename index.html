@@ -3,7 +3,76 @@
 <style>
 
 body {
-  font: 10px sans-serif;
+    font: 10px sans-serif;
+    margin-top:0px;
+    margin-left: 0px;
+}
+
+#svg1 {
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+#svg2 {
+    position:absolute;
+    left:250px;
+    top:0px;
+}
+
+#svg3 {
+    position:absolute;
+    left:500px;
+    top:0px;
+}
+
+#svg4 {
+    position:absolute;
+    left:750px;
+    top:0px;
+}
+
+#svg5 {
+    position:absolute;
+    left:1000px;
+    top:0px;
+}
+#p1{
+    position: absolute;
+    left: 100px;
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
+}
+
+#p2{
+    position: absolute;
+    left: 325px;
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
+}
+
+#p3{
+    position: absolute;
+    left: 600px;
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
+}
+#p4{
+    position: absolute;
+    left: 820px;
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
+}
+
+#p5{
+    position: absolute;
+    left: 1105px;
+    top: 190px;
+    color: steelblue;
+    font: 13px sans-serif;
 }
 
 .axis path,
@@ -17,22 +86,50 @@ body {
   display: none;
 }
 
-.line {
+.fe.line {
   fill: none;
-  stroke: steelblue;
+  stroke: #e9a3c9 ;
   stroke-width: 1.5px;
+}
+
+.ma.line {
+  fill: none;
+  stroke: #a1d76a;
+  stroke-width: 1.5px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/*when mouseover, show the circle*/
+.focusfe circle {
+    fill: #e9a3c9;
+    stroke: none;
+}
+
+.focusma circle {
+    fill: #a1d76a;
+    stroke: none;
 }
 
 </style>
 <body>
+
+<p id="p1">High Income</p>
+<p id="p2">Upper Middle Income</p>
+<p id="p3">Middle Income</p>
+<p id="p4">Lower Middle Income</p>
+<p id="p5">Low Income</p>
+
 <script src="//d3js.org/d3.v3.min.js"></script>
+
 <script>
 
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-//var formatDate = d3.time.format("%d-%b-%y");
+var margin = {top: 40, right: 30, bottom: 30, left: 50},
+    width = 250 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom;
 
 var x = d3.scale.linear()
     .range([0, width]);
@@ -42,65 +139,477 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");
+    .orient("bottom")
+    .tickValues([2013,2010,2007,2004]);
+//    .outerTickSize(2);
 
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
 var line = d3.svg.line()
-    .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.value); });
+//    .defined(function(d) { return d.year; }) //omit empty value
+//    .defined(function(d) { return d.value; }) //omit empty value
+    .x(function(d) { return x(d.year);})
+    .y(function(d) { return y(d.value);});
 
-var svg = d3.select("body").append("svg")
+var svg1 = d3.select("body").append("svg")
+    .attr("id","svg1")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg2 = d3.select("body").append("svg")
+    .attr("id","svg2")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg3 = d3.select("body").append("svg")
+        .attr("id","svg3")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var svg4 = d3.select("body").append("svg")
+        .attr("id","svg4")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg5 = d3.select("body").append("svg")
+        .attr("id","svg5")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+function getIndex(d, time){
+    var i;
+    for (i=0; i<d.length; i++){
+        if(d[i].year == time){
+            return i;
+        }
+    }
+}
 
 var raw_data, nested_data; //global variable
 //get the json file
-d3.csv("/data/wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
-//  if(error) return console.warn(error);
-  raw_data = csv;
-  nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
+d3.csv("wb_SE.SCH.LIFE.FE;SE.SCH.LIFE.MA.csv", function(csv){
+    //if(error) return console.warn(error);
+    raw_data = csv;
+    nested_data =  d3.nest()//http://cs.wellesley.edu/~mashups/pages/am5/d3tutorial2.html
           .key(function(d) { return d.country_id; })
           .key(function(d) { return d.indicator_id; })
           .map(raw_data);
 
-  x.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
-    return d.year;
-  }));
-  y.domain(d3.extent(nested_data['XD']['SE.SCH.LIFE.FE'], function(d) {
-    return d.value;
-  }));
+    x.domain([2004,2013]);
+    y.domain( [7,17]);
 
-  svg.append("g")
+    //svg1
+    svg1.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
-  svg.append("g")
+    svg1.append("g")
       .attr("class", "y axis")
       .call(yAxis);
 
-  svg.append("path")
+    svg1.append("path")
       .datum(nested_data['XD']['SE.SCH.LIFE.FE'])
-      .attr("class", "line")
+      .attr("class", "fe line")
       .attr("d", line);
 
-  svg.append("path")
-          .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
-          .attr("class", "line")
-          .attr("d", line)
-          .style("stroke", "green");
+    svg1.append("path")
+      .datum(nested_data['XD']['SE.SCH.LIFE.MA'])
+      .attr("class", "ma line")
+      .attr("d", line);
+
+    //svg2
+    svg2.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    svg2.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    svg2.append("path")
+            .datum(nested_data['XT']['SE.SCH.LIFE.FE'])
+            .attr("class", "fe line")
+            .attr("d", line);
+
+    svg2.append("path")
+            .datum(nested_data['XT']['SE.SCH.LIFE.MA'])
+            .attr("class", "ma line")
+            .attr("d", line);
+
+    //svg3
+    svg3.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    svg3.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    svg3.append("path")
+            .datum(nested_data['XP']['SE.SCH.LIFE.FE'])
+            .attr("class", "fe line")
+            .attr("d", line);
+
+    svg3.append("path")
+            .datum(nested_data['XP']['SE.SCH.LIFE.MA'])
+            .attr("class", "ma line")
+            .attr("d", line);
+
+    //svg4
+    svg4.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    svg4.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    svg4.append("path")
+            .datum(nested_data['XN']['SE.SCH.LIFE.FE'])
+            .attr("class", "fe line")
+            .attr("d", line);
+
+    svg4.append("path")
+            .datum(nested_data['XN']['SE.SCH.LIFE.MA'])
+            .attr("class", "ma line")
+            .attr("d", line);
+
+    //svg5
+    svg5.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+    svg5.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    svg5.append("path")
+            .datum(nested_data['XM']['SE.SCH.LIFE.FE'])
+            .attr("class", "fe line")
+            .attr("d", line);
+
+    svg5.append("path")
+            .datum(nested_data['XM']['SE.SCH.LIFE.MA'])
+            .attr("class", "ma line")
+            .attr("d", line);
+
+    //svg1 interaction
+    var focusfe1 = svg1.append("g")
+        .attr("class", "focusfe")
+        .style("display", "none");
+
+    focusfe1.append("circle")
+        .attr("r", 3);
+
+    focusfe1.append("text")
+        .attr("x", 9)
+        .attr("dy", ".35em");
+
+    //circle mark for male lines
+    var focusma1 = svg1.append("g")
+        .attr("class", "focusma")
+        .style("display", "none");
+
+    focusma1.append("circle")
+        .attr("r", 3);
+
+    focusma1.append("text")
+        .attr("x", 9)
+        .attr("dy", ".35em");
+
+    //add an overlap rect to sense mouseover
+    svg1.append("rect")
+        .attr("class", "overlay")
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", function() {
+            focusfe1.style("display", null);
+            focusma1.style("display", null);
+        })
+        .on("mouseout", function() {
+            focusfe1.style("display", "none");
+            focusma1.style("display", "none");
+        })
+        .on("mousemove", mousemove1);
+
+    //svg2 interaction
+    var focusfe2 = svg2.append("g")
+            .attr("class", "focusfe")
+            .style("display", "none");
+
+    focusfe2.append("circle")
+            .attr("r", 3);
+
+    focusfe2.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //circle mark for male lines
+    var focusma2 = svg2.append("g")
+            .attr("class", "focusma")
+            .style("display", "none");
+
+    focusma2.append("circle")
+            .attr("r", 3);
+
+    focusma2.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //add an overlap rect to sense mouseover
+    svg2.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+            .on("mouseover", function() {
+                focusfe2.style("display", null);
+                focusma2.style("display", null);
+            })
+            .on("mouseout", function() {
+                focusfe2.style("display", "none");
+                focusma2.style("display", "none");
+            })
+            .on("mousemove", mousemove2);
+
+    //svg3 interaction
+    var focusfe3 = svg3.append("g")
+            .attr("class", "focusfe")
+            .style("display", "none");
+
+    focusfe3.append("circle")
+            .attr("r", 3);
+
+    focusfe3.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //circle mark for male lines
+    var focusma3 = svg3.append("g")
+            .attr("class", "focusma")
+            .style("display", "none");
+
+    focusma3.append("circle")
+            .attr("r", 3);
+
+    focusma3.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //add an overlap rect to sense mouseover
+    svg3.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+            .on("mouseover", function() {
+                focusfe3.style("display", null);
+                focusma3.style("display", null);
+            })
+            .on("mouseout", function() {
+                focusfe3.style("display", "none");
+                focusma3.style("display", "none");
+            })
+            .on("mousemove", mousemove3);
+
+    //svg4 interaction
+    var focusfe4 = svg4.append("g")
+            .attr("class", "focusfe")
+            .style("display", "none");
+
+    focusfe4.append("circle")
+            .attr("r", 3);
+
+    focusfe4.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //circle mark for male lines
+    var focusma4 = svg4.append("g")
+            .attr("class", "focusma")
+            .style("display", "none");
+
+    focusma4.append("circle")
+            .attr("r", 3);
+
+    focusma4.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //add an overlap rect to sense mouseover
+    svg4.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+            .on("mouseover", function() {
+                focusfe4.style("display", null);
+                focusma4.style("display", null);
+            })
+            .on("mouseout", function() {
+                focusfe4.style("display", "none");
+                focusma4.style("display", "none");
+            })
+            .on("mousemove", mousemove4);
+
+    //svg5 interaction
+    var focusfe5 = svg5.append("g")
+            .attr("class", "focusfe")
+            .style("display", "none");
+
+    focusfe5.append("circle")
+            .attr("r", 3);
+
+    focusfe5.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //circle mark for male lines
+    var focusma5 = svg5.append("g")
+            .attr("class", "focusma")
+            .style("display", "none");
+
+    focusma5.append("circle")
+            .attr("r", 3);
+
+    focusma5.append("text")
+            .attr("x", 9)
+            .attr("dy", ".35em");
+
+    //add an overlap rect to sense mouseover
+    svg5.append("rect")
+            .attr("class", "overlay")
+            .attr("width", width)
+            .attr("height", height)
+            .on("mouseover", function() {
+                focusfe5.style("display", null);
+                focusma5.style("display", null);
+            })
+            .on("mouseout", function() {
+                focusfe5.style("display", "none");
+                focusma5.style("display", "none");
+            })
+            .on("mousemove", mousemove5);
+
+    function mousemove1() {
+        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                xm = Math.floor(x0),
+                indexfe = getIndex(nested_data['XD']['SE.SCH.LIFE.FE'],xm),
+                dfe0 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe -1],
+                dfe1 = nested_data['XD']['SE.SCH.LIFE.FE'][indexfe],
+                indexma = getIndex(nested_data['XD']['SE.SCH.LIFE.MA'],xm),
+                dma0 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma -1],
+                dma1 = nested_data['XD']['SE.SCH.LIFE.MA'][indexma];
+
+        //see which year is closer
+        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+
+        focusma1.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+        focusma1.select("text").text(Number(dma.value).toFixed(2));
+
+        focusfe1.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+        focusfe1.select("text").text(Number(dfe.value).toFixed(2));
+    }
+
+    function mousemove2() {
+        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                xm = Math.floor(x0),
+                indexfe = getIndex(nested_data['XT']['SE.SCH.LIFE.FE'],xm),
+                dfe0 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe -1],
+                dfe1 = nested_data['XT']['SE.SCH.LIFE.FE'][indexfe],
+                indexma = getIndex(nested_data['XT']['SE.SCH.LIFE.MA'],xm),
+                dma0 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma -1],
+                dma1 = nested_data['XT']['SE.SCH.LIFE.MA'][indexma];
+
+        //see which year is closer
+        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+
+        focusma2.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+        focusma2.select("text").text(Number(dma.value).toFixed(2));
+
+        focusfe2.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+        focusfe2.select("text").text(Number(dfe.value).toFixed(2));
+    }
+
+    function mousemove3() {
+        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                xm = Math.floor(x0),
+                indexfe = getIndex(nested_data['XP']['SE.SCH.LIFE.FE'],xm),
+                dfe0 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe -1],
+                dfe1 = nested_data['XP']['SE.SCH.LIFE.FE'][indexfe],
+                indexma = getIndex(nested_data['XP']['SE.SCH.LIFE.MA'],xm),
+                dma0 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma -1],
+                dma1 = nested_data['XP']['SE.SCH.LIFE.MA'][indexma];
+
+        //see which year is closer
+        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+
+        focusma3.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+        focusma3.select("text").text(Number(dma.value).toFixed(2));
+
+        focusfe3.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+        focusfe3.select("text").text(Number(dfe.value).toFixed(2));
+    }
+
+    function mousemove4() {
+        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                xm = Math.floor(x0),
+                indexfe = getIndex(nested_data['XN']['SE.SCH.LIFE.FE'],xm),
+                dfe0 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe -1],
+                dfe1 = nested_data['XN']['SE.SCH.LIFE.FE'][indexfe],
+                indexma = getIndex(nested_data['XN']['SE.SCH.LIFE.MA'],xm),
+                dma0 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma -1],
+                dma1 = nested_data['XN']['SE.SCH.LIFE.MA'][indexma];
+
+        //see which year is closer
+        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+
+        focusma4.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+        focusma4.select("text").text(Number(dma.value).toFixed(2));
+
+        focusfe4.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+        focusfe4.select("text").text(Number(dfe.value).toFixed(2));
+    }
+
+    function mousemove5() {
+        var x0 = x.invert(d3.mouse(this)[0]), //get the x mouse cursor value and invert it back to "year"
+                xm = Math.floor(x0),
+                indexfe = getIndex(nested_data['XM']['SE.SCH.LIFE.FE'],xm),
+                dfe0 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe -1],
+                dfe1 = nested_data['XM']['SE.SCH.LIFE.FE'][indexfe],
+                indexma = getIndex(nested_data['XM']['SE.SCH.LIFE.MA'],xm),
+                dma0 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma -1],
+                dma1 = nested_data['XM']['SE.SCH.LIFE.MA'][indexma];
+
+        //see which year is closer
+        var dfe = x0 - dfe0.year > dfe1.year - x0 ? dfe0 : dfe1;
+        var dma = x0 - dma0.year > dma1.year - x0 ? dma0 : dma1;
+
+        focusma5.attr("transform", "translate(" + x(dma.year) + "," + y(dma.value) + ")");
+        focusma5.select("text").text(Number(dma.value).toFixed(2));
+
+        focusfe5.attr("transform", "translate(" + x(dfe.year) + "," + y(dfe.value) + ")");
+        focusfe5.select("text").text(Number(dfe.value).toFixed(2));
+    }
 });
 
-//function type(d) {
-//  d.date = formatDate.parse(d.date);
-//  d.close = +d.close;
-//  return d;
-//}
 
 </script>
